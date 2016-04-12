@@ -11,8 +11,8 @@ Pod::Spec.new do |s|
   s.source                = { :git => "https://github.com/swp-song/SwpRequest.git", :tag => s.version }
   s.source_files          = "SwpRequest"
   s.requires_arc          = true
+  s.framework 		        = "Foundation"
   s.dependency "AFNetworking"
-  #s.dependency "Base64nl"
-
-
+  s.dependency "Base64nl"
+  
 end
