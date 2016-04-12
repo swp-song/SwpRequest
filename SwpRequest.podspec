@@ -2,9 +2,9 @@
 Pod::Spec.new do |s|
 
   s.name                  = "SwpRequest"
-  s.version               = "1.0.0"
+  s.version               = "1.0.1"
   s.ios.deployment_target = '7.0'
-  s.summary               = " AFNetworking 封装 "
+  s.summary               = " YouZhi Network Request API "
   s.homepage              = "https://github.com/swp-song/SwpRequest"
   s.license               = { :type => "MIT", :file => "LICENSE" }
   s.author                = { "swp-song" => "396587868@qq.com" }
