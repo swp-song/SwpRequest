@@ -143,7 +143,7 @@ NSDictionary *dictionary = [NSDictionary dictionary];
 
 #####备注：
 ```
-O(∩_∩)O,  如果有加密相同的 欢迎使用
+O(∩_∩)O,  如果有加密相同的 欢迎使用 
 ```
 ---
 
