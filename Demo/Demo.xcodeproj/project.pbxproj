@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D7095DA1CEB01E600F9C351 /* SwpDataDispose.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7095D91CEB01E600F9C351 /* SwpDataDispose.m */; };
+		2D7095DD1CEB06DA00F9C351 /* SwpRequestTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7095DC1CEB06DA00F9C351 /* SwpRequestTools.m */; };
+		2D7095E01CEB0A8400F9C351 /* SwpRequestVariableType.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7095DF1CEB0A8400F9C351 /* SwpRequestVariableType.m */; };
 		4692738D1CBCBFDD00C44D81 /* SwpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4692738C1CBCBFDD00C44D81 /* SwpRequest.m */; };
 		46D299FA1CBC96A300D4617E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D299F91CBC96A300D4617E /* main.m */; };
 		46D299FD1CBC96A300D4617E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D299FC1CBC96A300D4617E /* AppDelegate.m */; };
@@ -18,6 +21,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D7095D81CEB01E600F9C351 /* SwpDataDispose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpDataDispose.h; sourceTree = "<group>"; };
+		2D7095D91CEB01E600F9C351 /* SwpDataDispose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpDataDispose.m; sourceTree = "<group>"; };
+		2D7095DB1CEB06DA00F9C351 /* SwpRequestTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpRequestTools.h; sourceTree = "<group>"; };
+		2D7095DC1CEB06DA00F9C351 /* SwpRequestTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpRequestTools.m; sourceTree = "<group>"; };
+		2D7095DE1CEB0A8400F9C351 /* SwpRequestVariableType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpRequestVariableType.h; sourceTree = "<group>"; };
+		2D7095DF1CEB0A8400F9C351 /* SwpRequestVariableType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpRequestVariableType.m; sourceTree = "<group>"; };
 		3AF79BE01FB342F3DC5C1CAC /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		4579CFE00EB8CF1FD01B157C /* libPods-Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4692738B1CBCBFDD00C44D81 /* SwpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpRequest.h; sourceTree = "<group>"; };
@@ -52,6 +61,12 @@
 			children = (
 				4692738B1CBCBFDD00C44D81 /* SwpRequest.h */,
 				4692738C1CBCBFDD00C44D81 /* SwpRequest.m */,
+				2D7095D81CEB01E600F9C351 /* SwpDataDispose.h */,
+				2D7095D91CEB01E600F9C351 /* SwpDataDispose.m */,
+				2D7095DB1CEB06DA00F9C351 /* SwpRequestTools.h */,
+				2D7095DC1CEB06DA00F9C351 /* SwpRequestTools.m */,
+				2D7095DE1CEB0A8400F9C351 /* SwpRequestVariableType.h */,
+				2D7095DF1CEB0A8400F9C351 /* SwpRequestVariableType.m */,
 			);
 			name = SwpRequest;
 			path = ../SwpRequest;
@@ -240,7 +255,10 @@
 			files = (
 				46D29A001CBC96A300D4617E /* ViewController.m in Sources */,
 				46D299FD1CBC96A300D4617E /* AppDelegate.m in Sources */,
+				2D7095DD1CEB06DA00F9C351 /* SwpRequestTools.m in Sources */,
+				2D7095DA1CEB01E600F9C351 /* SwpDataDispose.m in Sources */,
 				4692738D1CBCBFDD00C44D81 /* SwpRequest.m in Sources */,
+				2D7095E01CEB0A8400F9C351 /* SwpRequestVariableType.m in Sources */,
 				46D299FA1CBC96A300D4617E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

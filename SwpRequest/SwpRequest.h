@@ -5,33 +5,16 @@
 //  Created by swp_song on 15/12/11.
 //  Copyright © 2015年 swp_song. All rights reserved.
 //
-//  @author             --->    swp_song
-//
-//  @modification Time  --->    2016-04-12 10:28:24
-//
-//  @warning            --->    !!! < AFNetworking 二次封装 使用时 需要导入 AFNetworking 网路库  > !!!
-
 
 #import <Foundation/Foundation.h>
 
 /*! ---------------------- Tool       ---------------------- !*/
 #import <AFNetworking/AFNetworking.h>     // AFNetworking 网络库
+#import "SwpRequestVariableType.h"        // 自定 参数
 /*! ---------------------- Tool       ---------------------- !*/
 
 NS_ASSUME_NONNULL_BEGIN
 
-/*! 网络状态  !*/
-typedef NS_ENUM(NSInteger, SwpResultReachabilityStatus) {
-    SwpResultReachabilityStatusUnknown          = -1,   /*! 未知网络    !*/
-    SwpResultReachabilityStatusNotReachable     = 0,    /*! 无网络      !*/
-    SwpResultReachabilityStatusReachableViaWWAN = 1,    /*! WWAN        !*/
-    SwpResultReachabilityStatusReachableViaWiFi = 2,    /*! WiFi        !*/
-};
-
-/*! SwpRequest 的请求成功 回调 Block !*/
-typedef void(^SwpResultSuccessHandle)(NSURLSessionDataTask *task, id resultObject);
-/*! SwpRequest 的请求失败 回调 Block !*/
-typedef void(^SwpResultErrorHandle)(NSURLSessionDataTask *task, NSError *error, NSString *errorMessage);
 
 @interface SwpRequest : NSObject
 
@@ -128,6 +111,19 @@ typedef void(^SwpResultErrorHandle)(NSURLSessionDataTask *task, NSError *error, 
  *  @param  encrypt                     请求 是否 对参数加密 (YES 加密 / NO 不加密)
  */
 + (void)swpRequestAFNetworkingTest:(NSString *)URLString parameters:(nullable NSDictionary *)parameters isEncrypt:(BOOL)encrypt;
+
+/*!
+ *  @author swp_song
+ *
+ *  @brief  swpDownloadFile:swpDownloadProgress:swpCompletionHandler:   ( 请求网络 < 下载图片方法 > )
+ *
+ *  @param  URLString                       请求的 url
+ *
+ *  @param  swpDownloadProgress             下载进度
+ *
+ *  @param  swpCompletionHandler            下载回调    ( 成功 | 失败 回调, 成功 Error 为 nil )
+ */
++ (void)swpDownloadFile:(NSString *)URLString swpDownloadProgress:(void(^)(SwpDownloadProgress swpDownloadProgress))swpDownloadProgress swpCompletionHandler:(void(^)(NSString *filePath, NSString *fileName,  NSString *error))swpCompletionHandler;
 
 /*!
  *  @author swp_song
