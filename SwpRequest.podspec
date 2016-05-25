@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.license               = { :type => "MIT", :file => "LICENSE" }
   s.author                = { "swp-song" => "396587868@qq.com" }
   s.source                = { :git => "https://github.com/swp-song/SwpRequest.git", :tag => s.version }
-  s.source_files          = "SwpRequest"
+  s.source_files          = "SwpRequest/**/*.{h,m}"
   s.requires_arc          = true
   s.framework             = "Foundation"
   s.dependency "AFNetworking"
