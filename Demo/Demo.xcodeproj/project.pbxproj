@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D7095DA1CEB01E600F9C351 /* SwpDataDispose.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7095D91CEB01E600F9C351 /* SwpDataDispose.m */; };
-		2D7095DD1CEB06DA00F9C351 /* SwpRequestTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7095DC1CEB06DA00F9C351 /* SwpRequestTools.m */; };
-		2D7095E01CEB0A8400F9C351 /* SwpRequestVariableType.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D7095DF1CEB0A8400F9C351 /* SwpRequestVariableType.m */; };
-		4692738D1CBCBFDD00C44D81 /* SwpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4692738C1CBCBFDD00C44D81 /* SwpRequest.m */; };
+		2D9EA12B1CF55AF20003B73C /* SwpDataDispose.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9EA1231CF55AF20003B73C /* SwpDataDispose.m */; };
+		2D9EA12C1CF55AF20003B73C /* SwpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9EA1251CF55AF20003B73C /* SwpRequest.m */; };
+		2D9EA12D1CF55AF20003B73C /* SwpRequestTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9EA1271CF55AF20003B73C /* SwpRequestTools.m */; };
+		2D9EA12E1CF55AF20003B73C /* SwpRequestVariableType.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9EA1291CF55AF20003B73C /* SwpRequestVariableType.m */; };
+		2D9EA1311CF55B040003B73C /* SwpNetworkModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9EA1301CF55B040003B73C /* SwpNetworkModel.m */; };
 		46D299FA1CBC96A300D4617E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D299F91CBC96A300D4617E /* main.m */; };
 		46D299FD1CBC96A300D4617E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D299FC1CBC96A300D4617E /* AppDelegate.m */; };
 		46D29A001CBC96A300D4617E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D299FF1CBC96A300D4617E /* ViewController.m */; };
@@ -21,16 +22,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2D7095D81CEB01E600F9C351 /* SwpDataDispose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpDataDispose.h; sourceTree = "<group>"; };
-		2D7095D91CEB01E600F9C351 /* SwpDataDispose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpDataDispose.m; sourceTree = "<group>"; };
-		2D7095DB1CEB06DA00F9C351 /* SwpRequestTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpRequestTools.h; sourceTree = "<group>"; };
-		2D7095DC1CEB06DA00F9C351 /* SwpRequestTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpRequestTools.m; sourceTree = "<group>"; };
-		2D7095DE1CEB0A8400F9C351 /* SwpRequestVariableType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpRequestVariableType.h; sourceTree = "<group>"; };
-		2D7095DF1CEB0A8400F9C351 /* SwpRequestVariableType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpRequestVariableType.m; sourceTree = "<group>"; };
+		2D9EA1221CF55AF20003B73C /* SwpDataDispose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpDataDispose.h; sourceTree = "<group>"; };
+		2D9EA1231CF55AF20003B73C /* SwpDataDispose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpDataDispose.m; sourceTree = "<group>"; };
+		2D9EA1241CF55AF20003B73C /* SwpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpRequest.h; sourceTree = "<group>"; };
+		2D9EA1251CF55AF20003B73C /* SwpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpRequest.m; sourceTree = "<group>"; };
+		2D9EA1261CF55AF20003B73C /* SwpRequestTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpRequestTools.h; sourceTree = "<group>"; };
+		2D9EA1271CF55AF20003B73C /* SwpRequestTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpRequestTools.m; sourceTree = "<group>"; };
+		2D9EA1281CF55AF20003B73C /* SwpRequestVariableType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpRequestVariableType.h; sourceTree = "<group>"; };
+		2D9EA1291CF55AF20003B73C /* SwpRequestVariableType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpRequestVariableType.m; sourceTree = "<group>"; };
+		2D9EA12F1CF55B040003B73C /* SwpNetworkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpNetworkModel.h; sourceTree = "<group>"; };
+		2D9EA1301CF55B040003B73C /* SwpNetworkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpNetworkModel.m; sourceTree = "<group>"; };
 		3AF79BE01FB342F3DC5C1CAC /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		4579CFE00EB8CF1FD01B157C /* libPods-Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4692738B1CBCBFDD00C44D81 /* SwpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpRequest.h; sourceTree = "<group>"; };
-		4692738C1CBCBFDD00C44D81 /* SwpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpRequest.m; sourceTree = "<group>"; };
 		46D299F51CBC96A300D4617E /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46D299F91CBC96A300D4617E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		46D299FB1CBC96A300D4617E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -56,26 +59,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4692738A1CBCBFDD00C44D81 /* SwpRequest */ = {
+		2D9EA1201CF55AF20003B73C /* SwpRequest */ = {
 			isa = PBXGroup;
 			children = (
-				4692738B1CBCBFDD00C44D81 /* SwpRequest.h */,
-				4692738C1CBCBFDD00C44D81 /* SwpRequest.m */,
-				2D7095D81CEB01E600F9C351 /* SwpDataDispose.h */,
-				2D7095D91CEB01E600F9C351 /* SwpDataDispose.m */,
-				2D7095DB1CEB06DA00F9C351 /* SwpRequestTools.h */,
-				2D7095DC1CEB06DA00F9C351 /* SwpRequestTools.m */,
-				2D7095DE1CEB0A8400F9C351 /* SwpRequestVariableType.h */,
-				2D7095DF1CEB0A8400F9C351 /* SwpRequestVariableType.m */,
+				2D9EA1211CF55AF20003B73C /* SwpNetworking */,
+				2D9EA12A1CF55AF20003B73C /* SwpNetworkModel */,
 			);
 			name = SwpRequest;
 			path = ../SwpRequest;
 			sourceTree = "<group>";
 		};
+		2D9EA1211CF55AF20003B73C /* SwpNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				2D9EA1221CF55AF20003B73C /* SwpDataDispose.h */,
+				2D9EA1231CF55AF20003B73C /* SwpDataDispose.m */,
+				2D9EA1241CF55AF20003B73C /* SwpRequest.h */,
+				2D9EA1251CF55AF20003B73C /* SwpRequest.m */,
+				2D9EA1261CF55AF20003B73C /* SwpRequestTools.h */,
+				2D9EA1271CF55AF20003B73C /* SwpRequestTools.m */,
+				2D9EA1281CF55AF20003B73C /* SwpRequestVariableType.h */,
+				2D9EA1291CF55AF20003B73C /* SwpRequestVariableType.m */,
+			);
+			path = SwpNetworking;
+			sourceTree = "<group>";
+		};
+		2D9EA12A1CF55AF20003B73C /* SwpNetworkModel */ = {
+			isa = PBXGroup;
+			children = (
+				2D9EA12F1CF55B040003B73C /* SwpNetworkModel.h */,
+				2D9EA1301CF55B040003B73C /* SwpNetworkModel.m */,
+			);
+			path = SwpNetworkModel;
+			sourceTree = "<group>";
+		};
 		46D299EC1CBC96A300D4617E = {
 			isa = PBXGroup;
 			children = (
-				4692738A1CBCBFDD00C44D81 /* SwpRequest */,
+				2D9EA1201CF55AF20003B73C /* SwpRequest */,
 				46D299F71CBC96A300D4617E /* Demo */,
 				46D299F61CBC96A300D4617E /* Products */,
 				7A34BA089C133E5BF491C926 /* Pods */,
@@ -254,11 +275,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				46D29A001CBC96A300D4617E /* ViewController.m in Sources */,
+				2D9EA1311CF55B040003B73C /* SwpNetworkModel.m in Sources */,
 				46D299FD1CBC96A300D4617E /* AppDelegate.m in Sources */,
-				2D7095DD1CEB06DA00F9C351 /* SwpRequestTools.m in Sources */,
-				2D7095DA1CEB01E600F9C351 /* SwpDataDispose.m in Sources */,
-				4692738D1CBCBFDD00C44D81 /* SwpRequest.m in Sources */,
-				2D7095E01CEB0A8400F9C351 /* SwpRequestVariableType.m in Sources */,
+				2D9EA12D1CF55AF20003B73C /* SwpRequestTools.m in Sources */,
+				2D9EA12B1CF55AF20003B73C /* SwpDataDispose.m in Sources */,
+				2D9EA12C1CF55AF20003B73C /* SwpRequest.m in Sources */,
+				2D9EA12E1CF55AF20003B73C /* SwpRequestVariableType.m in Sources */,
 				46D299FA1CBC96A300D4617E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
