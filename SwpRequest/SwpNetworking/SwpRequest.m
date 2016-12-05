@@ -207,7 +207,7 @@
 //        [SwpRequestTools swpRequestToolsSetNetworkActivityIndicatorVisible:NO];
 //    }];
     
-    return [[self class] POST:URLString parameters:parameters isEncrypt:encrypt uploadFileStatus:SwpResultSingleFileUpload fileNames:fileName fileDatas:fileDatas swpResultSuccess:swpResultSuccess swpResultError:swpResultError];
+    return [[self class] POST:URLString parameters:parameters isEncrypt:encrypt uploadFileStatus:SwpResultMultiplePicturesUpload fileNames:fileName fileDatas:fileDatas swpResultSuccess:swpResultSuccess swpResultError:swpResultError];
     
 }
 
@@ -259,7 +259,7 @@
 //        [SwpRequestTools swpRequestToolsSetNetworkActivityIndicatorVisible:NO];
 //    }];
     
-     return [[self class] POST:URLString parameters:parameters isEncrypt:encrypt uploadFileStatus:SwpResultSingleFileUpload fileNames:fileNames fileDatas:fileDatas swpResultSuccess:swpResultSuccess swpResultError:swpResultError];
+     return [[self class] POST:URLString parameters:parameters isEncrypt:encrypt uploadFileStatus:SwpResultMultipleFilesUpload fileNames:fileNames fileDatas:fileDatas swpResultSuccess:swpResultSuccess swpResultError:swpResultError];
 }
 
 
