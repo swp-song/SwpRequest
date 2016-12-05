@@ -24,10 +24,10 @@ typedef NS_ENUM(NSInteger, SwpResultReachabilityStatus) {
 /*! 上传图片 状态  !*/
 typedef NS_ENUM(NSInteger, SwpResultUploadFileStatus) {
     
-    SwpResultDoNotFileUpload = 0,
-    SwpResultSingleFileUpload,
-    SwpResultMultipleFilesUpload,
-    SwpResultMultiplePicturesUpload,
+    SwpResultDoNotFileUpload = 0,           /*! 不上传文件    !*/
+    SwpResultSingleFileUpload,              /*! 单位件上传    !*/
+    SwpResultMultipleFilesUpload,           /*! 多文件上传 < 文件名相同 >    !*/
+    SwpResultMultiplePicturesUpload,        /*! 多文件上传 < 文件名不同 >  !*/
 };
 
 /*! SwpRequest 的请求成功 回调 Block !*/

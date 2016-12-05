@@ -30,12 +30,12 @@
 @implementation SwpRequest
 
 #pragma mark - Init SwpRequest Method
-/*!
- *  @author swp_song
+/**!
+ *  @ author swp_song
  *
- *  @brief  shareInstance   ( 单利 快速初始化一个 SwpRequest )
+ *  @ brief  shareInstance   ( 单利 快速初始化一个 SwpRequest )
  *
- *  @return SwpRequest
+ *  @ return SwpRequest
  */
 + (instancetype)shareInstance {
     static SwpRequest *swpRequest = nil;
@@ -46,12 +46,12 @@
     return swpRequest;
 }
 
-/*!
- *  @author swp_song
+/**!
+ *  @ author swp_song
  *
- *  @brief  init    ( Override init )
+ *  @ brief  init    ( Override init )
  *
- *  @return SwpRequest
+ *  @ return SwpRequest
  */
 - (instancetype)init {
     
@@ -63,20 +63,22 @@
 }
 
 #pragma mark - SwpRequest Tool Methods
-/*!
- *  @author swp_song
+/**!
+ *  @ author swp_song
  *
- *  @brief  swpPOST:parameters:isEncrypt:swpResultSuccess:swpResultError:   ( 请求网络获取数据 <POST> )
+ *  @ brief  swpPOST:parameters:isEncrypt:swpResultSuccess:swpResultError:   ( 请求网络获取数据 <POST> )
  *
- *  @param  URLString                       请求的 url
+ *  @ param  URLString                       请求的 url
  *
- *  @param  parameters                      请求 需要传递的参数
+ *  @ param   parameters                      请求 需要传递的参数
  *
- *  @param  encrypt                         请求 是否 对参数加密 (YES 加密 / NO 不加密)
+ *  @ param  encrypt                         请求 是否 对参数加密 (YES 加密 / NO 不加密)
  *
- *  @param  swpResultSuccess                请求服务器成功
+ *  @ param  swpResultSuccess                请求服务器成功
  *
- *  @param  swpResultError                  请求服务器失败
+ *  @ param  swpResultError                  请求服务器失败
+ *
+ *  @ return SwpRequest
  */
 + (instancetype)swpPOST:(NSString *)URLString parameters:(NSDictionary *)parameters isEncrypt:(BOOL)encrypt swpResultSuccess:(SwpResultSuccessHandle)swpResultSuccess swpResultError:(SwpResultErrorHandle)swpResultError {
     // 初始化自定义网络请求类
@@ -107,24 +109,26 @@
     return [[self class] POST:URLString parameters:parameters isEncrypt:encrypt uploadFileStatus:SwpResultDoNotFileUpload fileNames:nil fileDatas:nil swpResultSuccess:swpResultSuccess swpResultError:swpResultError];
 }
 
-/*!
- *  @author swp_song
+/**!
+ *  @ author swp_song
  *
- *  @brief  swpPOSTAddFile:parameters:isEncrypt:fileName:fileData:swpResultSuccess:swpResultError:   ( 请求网络获上传文件 单文件上传 <POST> )
+ *  @ brief  swpPOSTAddFile:parameters:isEncrypt:fileName:fileData:swpResultSuccess:swpResultError:   ( 请求网络获上传文件 单文件上传 <POST> )
  *
- *  @param  URLString                       请求的 url
+ *  @ param  URLString                       请求的 url
  *
- *  @param  parameters                      请求 需要传递的参数
+ *  @ param  parameters                      请求 需要传递的参数
  *
- *  @param  encrypt                         请求 是否 对参数加密 (YES 加密 / NO 不加密)
+ *  @ param  encrypt                         请求 是否 对参数加密 (YES 加密 / NO 不加密)
  *
- *  @param  fileName                        请求 上传文件的名称 (和后台一致)
+ *  @ param  fileName                        请求 上传文件的名称 (和后台一致)
  *
- *  @param  fileData                        请求 上传文件的数据流
+ *  @ param  fileData                        请求 上传文件的数据流
  *
- *  @param  swpResultSuccess                请求服务器成功
+ *  @ param  swpResultSuccess                请求服务器成功
  *
- *  @param  swpResultError                  请求服务器失败
+ *  @ param  swpResultError                  请求服务器失败
+ *
+ *  @ return SwpRequest
  */
 + (instancetype)swpPOSTAddFile:(NSString *)URLString parameters:(NSDictionary *)parameters isEncrypt:(BOOL)encrypt fileName:(NSString *)fileName fileData:(NSData *)fileData swpResultSuccess:(SwpResultSuccessHandle)swpResultSuccess swpResultError:(SwpResultErrorHandle)swpResultError {
     
@@ -156,24 +160,26 @@
     return [[self class] POST:URLString parameters:parameters isEncrypt:encrypt uploadFileStatus:SwpResultSingleFileUpload fileNames:fileName fileDatas:fileData swpResultSuccess:swpResultSuccess swpResultError:swpResultError];
 }
 
-/*!
- *  @author swp_song
+/**!
+ *  @ author swp_song
  *
- *  @brief  swpPOSTAddFiles:parameters:isEncrypt:fileName:fileDatas:swpResultSuccess:swpResultError:    ( 请求网络获上传文件 多文件上传, 文件名称相同使用该方法 <POST> )
+ *  @ brief  swpPOSTAddFiles:parameters:isEncrypt:fileName:fileDatas:swpResultSuccess:swpResultError:    ( 请求网络获上传文件 多文件上传, 文件名称相同使用该方法 <POST> )
  *
- *  @param  URLString                       请求的 url
+ *  @ param  URLString                       请求的 url
  *
- *  @param  parameters                      请求 需要传递的参数
+ *  @ param  parameters                      请求 需要传递的参数
  *
- *  @param  encrypt                         请求 是否 对参数加密 (YES 加密 / NO 不加密)
+ *  @ param  encrypt                         请求 是否 对参数加密 (YES 加密 / NO 不加密)
  *
- *  @param  fileName                        请求 上传文件的名称 (和后台一致)
+ *  @ param  fileName                        请求 上传文件的名称 (和后台一致)
  *
- *  @param  fileDatas                       请求 上传文件的流数组
+ *  @ param  fileDatas                       请求 上传文件的流数组
  *
- *  @param  swpResultSuccess                请求服务器成功
+ *  @ param  swpResultSuccess                请求服务器成功
  *
- *  @param  swpResultError                  请求服务器失败
+ *  @ param  swpResultError                  请求服务器失败
+ *
+ *  @ return SwpRequest
  */
 + (instancetype)swpPOSTAddFiles:(NSString *)URLString parameters:(NSDictionary *)parameters isEncrypt:(BOOL)encrypt fileName:(NSString *)fileName fileDatas:(NSArray *)fileDatas swpResultSuccess:(SwpResultSuccessHandle)swpResultSuccess swpResultError:(SwpResultErrorHandle)swpResultError {
     
@@ -211,24 +217,26 @@
     
 }
 
-/*!
- *  @author swp_song
+/**!
+ *  @ author swp_song
  *
- *  @brief  swpPOSTAddWithFiles:parameters:isEncrypt:fileNames:fileDatas:swpResultSuccess:swpResultError:   ( 请求网络获上传文件 多文件上传, 文件名称不相同相同使用该方法  <POST> )
+ *  @ brief  swpPOSTAddWithFiles:parameters:isEncrypt:fileNames:fileDatas:swpResultSuccess:swpResultError:   ( 请求网络获上传文件 多文件上传, 文件名称不相同相同使用该方法  <POST> )
  *
- *  @param  URLString                       请求的 url
+ *  @ param  URLString                       请求的 url
  *
- *  @param  parameters                      请求 需要传递的参数
+ *  @ param  parameters                      请求 需要传递的参数
  *
- *  @param  encrypt                         请求 是否 对参数加密 (YES 加密 / NO 不加密)
+ *  @ param  encrypt                         请求 是否 对参数加密 (YES 加密 / NO 不加密)
  *
- *  @param  fileNames                       请求 上传文件的名称数组 (和后台一致)
+ *  @ param  fileNames                       请求 上传文件的名称数组 (和后台一致)
  *
- *  @param  fileDatas                       请求 上传文件的流数组
+ *  @ param  fileDatas                       请求 上传文件的流数组
  *
- *  @param  swpResultSuccess                请求服务器成功
+ *  @ param  swpResultSuccess                请求服务器成功
  *
- *  @param  swpResultError                  请求服务器失败
+ *  @ param  swpResultError                  请求服务器失败
+ *
+ *  @ return SwpRequest
  */
 + (instancetype)swpPOSTAddWithFiles:(NSString *)URLString parameters:(NSDictionary *)parameters isEncrypt:(BOOL)encrypt fileNames:(NSArray *)fileNames fileDatas:(NSArray *)fileDatas swpResultSuccess:(SwpResultSuccessHandle)swpResultSuccess swpResultError:(SwpResultErrorHandle)swpResultError {
     
@@ -298,12 +306,12 @@
     [downloadTask resume];
 }
 
-/*!
- *  @author swp_song
+/**!
+ *  @ author swp_song
  *
- *  @brief  swpRequestReachabilityStatusChangeBlock:    ( 验证 网路 环境 )
+ *  @ brief  swpRequestReachabilityStatusChangeBlock:    ( 验证 网路 环境 )
  *
- *  @param  swpResultStatus
+ *  @ param  swpResultStatus
  */
 + (void)swpRequestReachabilityStatusChangeBlock:(void(^)(SwpResultReachabilityStatus swpResultStatus))swpResultStatus {
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
@@ -330,21 +338,23 @@
 
 
 
-/*!
- *  @author swp_song
+/**!
+ *  @ author swp_song
  *
- *  @brief  swpRequestAFNetworkingTest:parametersisEncrypt:  ( AFNetworking 测试方法 )
+ *  @ brief  swpRequestAFNetworkingTest: parametersisEncrypt:  ( AFNetworking 测试方法 )
  *
- *  @param  URLString                   请求的 url
+ *  @ param  URLString                   请求的 url
  *
- *  @param  parameters                  请求 需要传递的参数
+ *  @ param  parameters                  请求 需要传递的参数
  *
- *  @param  encrypt                     请求 是否 对参数加密 (YES 加密 / NO 不加密)
+ *  @ param  encrypt                     请求 是否 对参数加密 (YES 加密 / NO 不加密)
+ *
+ *  @ return SwpRequest
  */
-+ (void)swpRequestAFNetworkingTest:(NSString *)URLString parameters:(NSDictionary *)parameters isEncrypt:(BOOL)encrypt {
-    NSLog(@"This is AFNetworking Test Method");
++ (instancetype)swpRequestAFNetworkingTest:(NSString *)URLString parameters:(NSDictionary *)parameters isEncrypt:(BOOL)encrypt {
+//    NSLog(@"This is AFNetworking Test Method");
     
-    [[self class] POST:@"" parameters:nil isEncrypt:YES uploadFileStatus:SwpResultDoNotFileUpload fileNames:@[@"", @"", @""] fileDatas:@[@"", @"", @""] swpResultSuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull resultObject) {
+    return  [[self class] POST:@"" parameters:nil isEncrypt:YES uploadFileStatus:SwpResultDoNotFileUpload fileNames:@[@"", @"", @""] fileDatas:@[@"", @"", @""] swpResultSuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull resultObject) {
         
     } swpResultError:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error, NSString * _Nonnull errorMessage) {
         
@@ -353,47 +363,47 @@
 
 
 #pragma makr - SwpRequest Public Tool Methods
-/*!
- *  @author swp_song
+/**!
+ *  @ author swp_song
  *
- *  @brief  getSwpResultAppKeyEncryptedValue    ( 取出 加密 app_key Value )
+ *  @ brief  getSwpResultAppKeyEncryptedValue    ( 取出 加密 app_key Value )
  *
- *  @return NSString
+ *  @ return NSString
  */
 + (NSString *)swpResultGetAppKeyEncryptedValue {
     return [SwpRequest shareInstance].swpResultAppKeyEncryptedValue;
 }
 
-/*!
- *  @author swp_song
+/**!
+ *  @ author swp_song
  *
- *  @brief  setSwpRequestAppKey:    ( 设置 appKey, 加密 key )
+ *  @ brief  setSwpRequestAppKey:    ( 设置 appKey, 加密 key )
  *
- *  @param  swpRequestAppKey
+ *  @ param  swpRequestAppKey
  */
 + (void)swpRequestSetAppKey:(NSString *)swpRequestAppKey {
     [[SwpRequest shareInstance] setSwpRequestAppKey:swpRequestAppKey];
 }
 
-/*!
- *  @author swp_song
+/**!
+ *  @ author swp_song
  *
- *  @brief  swpRequestEncryptedParams:  ( 参数加密 )
+ *  @ brief  swpRequestEncrypted params:  ( 参数加密 )
  *
- *  @param  dictionary
+ *  @ param  dictionary
  *
- *  @return NSDictionary
+ *  @ return NSDictionary
  */
 + (NSDictionary *)swpRequestEncryptedParams:(NSDictionary *)dictionary {
     return [SwpDataDispose swpDataEncryptParams:dictionary encryptedKey:[SwpRequest shareInstance].swpRequestAppKey];
 }
 
-/*!
- *  @author swp_song
+/**!
+ *  @ author swp_song
  *
- *  @brief  swpRequestYouZhiPrintDataInformation: ( 打印 YouZhi 结果集, 该方法 是打印返回 结果集 )
+ *  @ brief  swpRequestYouZhiPrintDataInformation: ( 打印 YouZhi 结果集, 该方法 是打印返回 结果集 )
  *
- *  @param  dictionary
+ *  @ param  dictionary
  */
 + (void)swpRequestYouZhiPrintDataInformation:(NSDictionary *)dictionary {
     if (dictionary == nil) return;
@@ -403,12 +413,12 @@
     NSLog(@"obj     : ===> %@",  [dictionary objectForKey:@"obj"]);
 }
 
-/*!
- *  @author swp_song
+/**!
+ *  @ author swp_song
  *
- *  @brief  setSwpRequestAppKey:    ( Override Setter swpRequestAppKey )
+ *  @ brief  setSwpRequestAppKey:    ( Override Setter swpRequestAppKey )
  *
- *  @param  swpRequestAppKey
+ *  @ param  swpRequestAppKey
  */
 - (void)setSwpRequestAppKey:(NSString *)swpRequestAppKey {
     _swpRequestAppKey = swpRequestAppKey;
@@ -418,8 +428,6 @@
 #pragma mark - 
 
 + (instancetype)POST:(NSString *)URLString parameters:(NSDictionary *)parameters isEncrypt:(BOOL)encrypt uploadFileStatus:(SwpResultUploadFileStatus)uploadFileStatus fileNames:(id)fileNames fileDatas:(id)fileDatas swpResultSuccess:(SwpResultSuccessHandle)swpResultSuccess swpResultError:(SwpResultErrorHandle)swpResultError {
-    
-    
     
     NSLog(@"%@", [fileNames class]);
     NSLog(@"%@", [fileDatas class]);
@@ -439,29 +447,33 @@
     [swpRequest.swpSessionManager POST:URLString parameters:dictionary constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         
         switch (uploadFileStatus) {
+                // 不上传 文件
             case SwpResultDoNotFileUpload:
                 break;
                 
+                // 单文件
             case SwpResultSingleFileUpload: {
                 [formData appendPartWithFileData:[NSData dataWithData:fileDatas] name:[NSString stringWithFormat:@"%@", fileNames] fileName:@"picture.png" mimeType:@"image/png"];
             }
                 break;
                 
+                // 文件名称 不同
             case SwpResultMultipleFilesUpload: {
-                NSArray *datas = [NSArray arrayWithArray:fileDatas];
-                for (int i=0; i<datas.count; i++) {
-                    NSString *imageName = [NSString stringWithFormat:@"%@[%i]", fileNames, i];
-                    [formData appendPartWithFileData:fileDatas[i] name:imageName fileName:imageName mimeType:@"image/png"];
-                }
-            }
-                break;
-                
-            case SwpResultMultiplePicturesUpload: {
-                
                 NSArray *names = [NSArray arrayWithArray:fileNames];
                 NSArray *datas = [NSArray arrayWithArray:fileDatas];
                 for (int i=0; i<datas.count; i++) {
                     [formData appendPartWithFileData:datas[i] name:names[i] fileName:names[i] mimeType:@"image/png"];
+                }
+                
+            }
+                break;
+                
+                // 文件 名称 相同
+            case SwpResultMultiplePicturesUpload: {
+                NSArray *datas = [NSArray arrayWithArray:fileDatas];
+                for (int i=0; i<datas.count; i++) {
+                    NSString *imageName = [NSString stringWithFormat:@"%@[%i]", fileNames, i];
+                    [formData appendPartWithFileData:fileDatas[i] name:imageName fileName:imageName mimeType:@"image/png"];
                 }
             }
                 break;
