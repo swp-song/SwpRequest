@@ -43,7 +43,7 @@ struct SwpDownloadProgress {
 };
 typedef struct SwpDownloadProgress SwpDownloadProgress;
 
-/*!
+/**!
  *  @ author swp_song
  *
  *  @ brief  SwpDownloadProgress ( 快速初始化 表示下载进度的结构体 )

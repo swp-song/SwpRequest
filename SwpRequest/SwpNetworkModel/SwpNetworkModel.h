@@ -50,33 +50,34 @@ NS_ASSUME_NONNULL_BEGIN
 /*! 获取接口数据时, 用户登录状态   !*/
 @property (nonatomic, assign, getter = isSwpNetworkUserLonginState) BOOL swpNetworkUserLonginState;
 
-/*!
- *  @author swp_song
+/**!
+ *  @ author swp_song
  *
- *  @brief  shareInstance ( 单利 )
+ *  @ brief  shareInstance ( 单利 )
  *
- *  @return SwpNetworkModel
+ *  @ return SwpNetworkModel
  */
 + (instancetype)shareInstance;
 
-/*!
- *  @author swp_song
+/**!
+ *  @ author swp_song
  *
- *  @brief  swpChekNetworkError: ( 检查是否 是否 是返回网络异常的提示信息 )
+ *  @ brief  swpChekNetworkError: ( 检查是否 是否 是返回网络异常的提示信息 )
  *
- *  @param  errorMessage
+ *  @ param  errorMessage
  *
- *  @return NSString
+ *  @ return NSString
  */
 + (nullable NSString *)swpChekNetworkError:(nullable NSString *)errorMessage;
-/*!
- *  @author swp_song
+
+/**!
+ *  @ author swp_song
  *
- *  @brief  swpNetworkSetBaseURL:baseSet    ( 设置 接口 域名 和 主接口地址 )
+ *  @ brief  swpNetworkSetBaseURL:baseSet    ( 设置 接口 域名 和 主接口地址 )
  *
- *  @param  baseURL
+ *  @ param  baseURL
  *
- *  @param  baseSet
+ *  @ param  baseSet
  */
 + (void)swpNetworkSetBaseURL:(NSString *)baseURL baseSet:(NSString *)baseSet;
 

@@ -81,31 +81,7 @@
  *  @ return SwpRequest
  */
 + (instancetype)swpPOST:(NSString *)URLString parameters:(NSDictionary *)parameters isEncrypt:(BOOL)encrypt swpResultSuccess:(SwpResultSuccessHandle)swpResultSuccess swpResultError:(SwpResultErrorHandle)swpResultError {
-    // 初始化自定义网络请求类
     
-//    SwpRequest           *swpRequest   = [SwpRequest shareInstance];
-//    
-//    // 字典加密
-//    NSDictionary         *dictionary   = encrypt ? [SwpDataDispose swpDataEncryptParams:parameters encryptedKey:swpRequest.swpRequestAppKey] : parameters;
-//    // 返回结果集
-//    __block NSDictionary *resultObject = [NSDictionary dictionary];
-//    
-//    // 显示 状态栏 请求数据的菊花
-//    [SwpRequestTools swpRequestToolsSetNetworkActivityIndicatorVisible:YES];
-//    
-//    // 发起请求
-//    [swpRequest.swpSessionManager POST:URLString parameters:dictionary progress:^(NSProgress * _Nonnull uploadProgress) {
-//        
-//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//        resultObject = [SwpDataDispose swpDataRequestDecryptDispose:responseObject isBase64:encrypt];
-//        swpResultSuccess(task, resultObject);
-//        [SwpRequestTools swpRequestToolsSetNetworkActivityIndicatorVisible:NO];
-//        
-//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//        swpResultError(task, error, [SwpRequestTools swpRequestToolsGetErrorMessage:error]);
-//        [SwpRequestTools swpRequestToolsSetNetworkActivityIndicatorVisible:NO];
-//    }];
-  
     return [[self class] POST:URLString parameters:parameters isEncrypt:encrypt uploadFileStatus:SwpResultDoNotFileUpload fileNames:nil fileDatas:nil swpResultSuccess:swpResultSuccess swpResultError:swpResultError];
 }
 
@@ -132,31 +108,6 @@
  */
 + (instancetype)swpPOSTAddFile:(NSString *)URLString parameters:(NSDictionary *)parameters isEncrypt:(BOOL)encrypt fileName:(NSString *)fileName fileData:(NSData *)fileData swpResultSuccess:(SwpResultSuccessHandle)swpResultSuccess swpResultError:(SwpResultErrorHandle)swpResultError {
     
-//    // 初始化自定义网络请求类
-//    SwpRequest           *swpRequest   = [SwpRequest shareInstance];
-//    
-//    // 字典加密
-//    NSDictionary         *dictionary   = encrypt ? [SwpDataDispose swpDataEncryptParams:parameters encryptedKey:swpRequest.swpRequestAppKey] : parameters;
-//    // 返回结果集
-//    __block NSDictionary *resultObject = [NSDictionary dictionary];
-//    
-//    // 显示 状态栏 请求数据的菊花
-//    [SwpRequestTools swpRequestToolsSetNetworkActivityIndicatorVisible:YES];
-//    
-//    // 发起请求
-//    [swpRequest.swpSessionManager POST:URLString parameters:dictionary constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
-//        [formData appendPartWithFileData:fileData name:fileName fileName:@"picture.png" mimeType:@"image/png"];
-//    } progress:^(NSProgress * _Nonnull uploadProgress) {
-//        
-//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//        resultObject = [SwpDataDispose swpDataRequestDecryptDispose:responseObject isBase64:encrypt];
-//        swpResultSuccess(task, resultObject);
-//        [SwpRequestTools swpRequestToolsSetNetworkActivityIndicatorVisible:NO];
-//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//        swpResultError(task, error, [SwpRequestTools swpRequestToolsGetErrorMessage:error]);
-//        [SwpRequestTools swpRequestToolsSetNetworkActivityIndicatorVisible:NO];
-//    }];
-    
     return [[self class] POST:URLString parameters:parameters isEncrypt:encrypt uploadFileStatus:SwpResultSingleFileUpload fileNames:fileName fileDatas:fileData swpResultSuccess:swpResultSuccess swpResultError:swpResultError];
 }
 
@@ -182,36 +133,6 @@
  *  @ return SwpRequest
  */
 + (instancetype)swpPOSTAddFiles:(NSString *)URLString parameters:(NSDictionary *)parameters isEncrypt:(BOOL)encrypt fileName:(NSString *)fileName fileDatas:(NSArray *)fileDatas swpResultSuccess:(SwpResultSuccessHandle)swpResultSuccess swpResultError:(SwpResultErrorHandle)swpResultError {
-    
-//    // 初始化自定义网络请求类
-//    SwpRequest           *swpRequest   = [SwpRequest shareInstance];
-//    
-//    // 字典加密
-//    NSDictionary         *dictionary   = encrypt ? [SwpDataDispose swpDataEncryptParams:parameters encryptedKey:swpRequest.swpRequestAppKey] : parameters;
-//    // 返回结果集
-//    __block NSDictionary *resultObject = [NSDictionary dictionary];
-//    
-//    // 显示 状态栏 请求数据的菊花
-//    [SwpRequestTools swpRequestToolsSetNetworkActivityIndicatorVisible:YES];
-//    
-//    // 发起请求
-//    [swpRequest.swpSessionManager POST:URLString parameters:dictionary constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
-//      
-//        for (int i=0; i<fileDatas.count; i++) {
-//            NSString *imageName = [NSString stringWithFormat:@"%@[%i]", fileName, i];
-//            [formData appendPartWithFileData:fileDatas[i] name:imageName fileName:imageName mimeType:@"image/png"];
-//        }
-//
-//    } progress:^(NSProgress * _Nonnull uploadProgress) {
-//    
-//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//        resultObject = [SwpDataDispose swpDataRequestDecryptDispose:responseObject isBase64:encrypt];
-//        swpResultSuccess(task, resultObject);
-//        [SwpRequestTools swpRequestToolsSetNetworkActivityIndicatorVisible:NO];
-//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//        swpResultError(task, error, [SwpRequestTools swpRequestToolsGetErrorMessage:error]);
-//        [SwpRequestTools swpRequestToolsSetNetworkActivityIndicatorVisible:NO];
-//    }];
     
     return [[self class] POST:URLString parameters:parameters isEncrypt:encrypt uploadFileStatus:SwpResultMultiplePicturesUpload fileNames:fileName fileDatas:fileDatas swpResultSuccess:swpResultSuccess swpResultError:swpResultError];
     
@@ -240,53 +161,27 @@
  */
 + (instancetype)swpPOSTAddWithFiles:(NSString *)URLString parameters:(NSDictionary *)parameters isEncrypt:(BOOL)encrypt fileNames:(NSArray *)fileNames fileDatas:(NSArray *)fileDatas swpResultSuccess:(SwpResultSuccessHandle)swpResultSuccess swpResultError:(SwpResultErrorHandle)swpResultError {
     
-//    // 初始化自定义网络请求类
-//    SwpRequest           *swpRequest   = [SwpRequest shareInstance];
-//    
-//    // 字典加密
-//    NSDictionary         *dictionary   = encrypt ? [SwpDataDispose swpDataEncryptParams:parameters encryptedKey:swpRequest.swpRequestAppKey] : parameters;
-//    // 返回结果集
-//    __block NSDictionary *resultObject = [NSDictionary dictionary];
-//    
-//    // 显示 状态栏 请求数据的菊花
-//    [SwpRequestTools swpRequestToolsSetNetworkActivityIndicatorVisible:YES];
-//    
-//    // 发起请求
-//    [swpRequest.swpSessionManager POST:URLString parameters:dictionary constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
-//        for (int i=0; i<fileDatas.count; i++) {
-//            [formData appendPartWithFileData:fileDatas[i] name:fileNames[i] fileName:fileNames[i] mimeType:@"image/png"];
-//        }
-//    } progress:^(NSProgress * _Nonnull uploadProgress) {
-//
-//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//        resultObject = [SwpDataDispose swpDataRequestDecryptDispose:responseObject isBase64:encrypt];
-//        swpResultSuccess(task, resultObject);
-//        [SwpRequestTools swpRequestToolsSetNetworkActivityIndicatorVisible:NO];
-//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//        swpResultError(task, error, [SwpRequestTools swpRequestToolsGetErrorMessage:error]);
-//        [SwpRequestTools swpRequestToolsSetNetworkActivityIndicatorVisible:NO];
-//    }];
-    
      return [[self class] POST:URLString parameters:parameters isEncrypt:encrypt uploadFileStatus:SwpResultMultipleFilesUpload fileNames:fileNames fileDatas:fileDatas swpResultSuccess:swpResultSuccess swpResultError:swpResultError];
 }
 
 
-/*!
- *  @author swp_song
+/**!
+ *  @ author swp_song
  *
- *  @brief  swpDownloadFile:swpDownloadProgress:swpCompletionHandler:   ( 请求网络 < 下载图片方法 > )
+ *  @ brief  swpDownloadFile:swpDownloadProgress:swpCompletionHandler:   ( 请求网络 < 下载图片方法 > )
  *
- *  @param  URLString                       请求的 url
+ *  @ param  URLString                       请求的 url
  *
- *  @param  swpDownloadProgress             下载进度
+ *  @ param  swpDownloadProgress             下载进度
  *
- *  @param  swpCompletionHandler            下载回调    ( 成功 | 失败 回调, 成功 Error 为 nil )
+ *  @ param  swpCompletionHandler            下载回调    ( 成功 | 失败 回调, 成功 Error 为 nil )
  */
 + (void)swpDownloadFile:(NSString *)URLString swpDownloadProgress:(void(^)(SwpDownloadProgress swpDownloadProgress))swpDownloadProgress swpCompletionHandler:(void(^)(NSString *filePath, NSString *fileName,  NSString *error))swpCompletionHandler {
     
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSMutableURLRequest       *request       = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:URLString]];
     AFHTTPSessionManager      *manager       = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:configuration];
+    
     // 发起 请求
     [SwpRequestTools swpRequestToolsSetNetworkActivityIndicatorVisible:YES];
     NSURLSessionDownloadTask *downloadTask   = [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
@@ -312,8 +207,10 @@
  *  @ brief  swpRequestReachabilityStatusChangeBlock:    ( 验证 网路 环境 )
  *
  *  @ param  swpResultStatus
+ *
+ *  @ return SwpRequest
  */
-+ (void)swpRequestReachabilityStatusChangeBlock:(void(^)(SwpResultReachabilityStatus swpResultStatus))swpResultStatus {
++ (instancetype)swpRequestReachabilityStatusChangeBlock:(void(^)(SwpResultReachabilityStatus swpResultStatus))swpResultStatus {
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
         
@@ -334,9 +231,9 @@
                 break;
         }
     }];
+    
+    return [SwpRequest shareInstance];
 }
-
-
 
 /**!
  *  @ author swp_song
@@ -352,13 +249,11 @@
  *  @ return SwpRequest
  */
 + (instancetype)swpRequestAFNetworkingTest:(NSString *)URLString parameters:(NSDictionary *)parameters isEncrypt:(BOOL)encrypt {
-//    NSLog(@"This is AFNetworking Test Method");
+    SwpRequest *swpRequest   = [SwpRequest shareInstance];
     
-    return  [[self class] POST:@"" parameters:nil isEncrypt:YES uploadFileStatus:SwpResultDoNotFileUpload fileNames:@[@"", @"", @""] fileDatas:@[@"", @"", @""] swpResultSuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull resultObject) {
-        
-    } swpResultError:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error, NSString * _Nonnull errorMessage) {
-        
-    }];
+    NSLog(@"This is AFNetworking Test Method");
+    
+    return  swpRequest;
 }
 
 
@@ -425,12 +320,31 @@
 }
 
 
-#pragma mark - 
-
+#pragma mark -
+/**!
+ *  @ author swp_song
+ *
+ *  @ brief  POST:parameters:isEncrypt:uploadFileStatus:fileNames:fileDatas:swpResultSuccess:swpResultError:    ( 网络请求核心方法  )
+ *
+ *  @ param  URLString                       请求的 url
+ *
+ *  @ param  parameters                      请求 需要传递的参数
+ *
+ *  @ param  encrypt                         请求 是否 对参数加密 (YES 加密 / NO 不加密)
+ *
+ *  @ param  uploadFileStatus                上传文件状态
+ *
+ *  @ param  fileNames                       请求 上传文件的名称数组 (和后台一致)
+ *
+ *  @ param  fileDatas                       请求 上传文件的流数组
+ *
+ *  @ param  swpResultSuccess                请求服务器成功
+ *
+ *  @ param  swpResultError                  请求服务器失败
+ *
+ *  @ return SwpRequest
+ */
 + (instancetype)POST:(NSString *)URLString parameters:(NSDictionary *)parameters isEncrypt:(BOOL)encrypt uploadFileStatus:(SwpResultUploadFileStatus)uploadFileStatus fileNames:(id)fileNames fileDatas:(id)fileDatas swpResultSuccess:(SwpResultSuccessHandle)swpResultSuccess swpResultError:(SwpResultErrorHandle)swpResultError {
-    
-    NSLog(@"%@", [fileNames class]);
-    NSLog(@"%@", [fileDatas class]);
     
     // 初始化自定义网络请求类
     SwpRequest           *swpRequest   = [SwpRequest shareInstance];

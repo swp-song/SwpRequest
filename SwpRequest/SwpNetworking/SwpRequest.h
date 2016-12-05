@@ -139,8 +139,10 @@ NS_ASSUME_NONNULL_BEGIN
  *  @ brief  swpRequestReachabilityStatusChangeBlock:    ( 验证 网路 环境 )
  *
  *  @ param  swpResultStatus
+ *
+ *  @ return SwpRequest
  */
-+ (void)swpRequestReachabilityStatusChangeBlock:(void(^)(SwpResultReachabilityStatus swpResultStatus))swpResultStatus;
++ (instancetype)swpRequestReachabilityStatusChangeBlock:(void(^)(SwpResultReachabilityStatus swpResultStatus))swpResultStatus;
 
 #pragma makr - SwpRequest Public Tool Methods
 /**!

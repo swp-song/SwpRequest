@@ -10,12 +10,12 @@
 
 @implementation SwpNetworkModel
 
-/*!
- *  @author swp_song
+/**!
+ *  @ author swp_song
  *
- *  @brief  shareInstance ( 单利 )
+ *  @ brief  shareInstance ( 单利 )
  *
- *  @return SwpNetworkModel
+ *  @ return SwpNetworkModel
  */
 + (instancetype)shareInstance {
     static SwpNetworkModel *swpNetwork = nil;
@@ -26,12 +26,14 @@
     return swpNetwork;
 }
 
-/*!
- *  @author swp_song
+/**!
+ *  @ author swp_song
  *
- *  @brief  Override init
+ *  @ brief  swpChekNetworkError: ( 检查是否 是否 是返回网络异常的提示信息 )
  *
- *  @return SwpNetworkModel
+ *  @ param  errorMessage
+ *
+ *  @ return NSString
  */
 - (instancetype)init {
     
@@ -61,27 +63,27 @@
     return self;
 }
 
-/*!
- *  @author swp_song
+/**!
+ *  @ author swp_song
  *
- *  @brief  swpChekNetworkError: ( 检查是否 是否 是返回网络异常的提示信息 )
+ *  @ brief  swpChekNetworkError: ( 检查是否 是否 是返回网络异常的提示信息 )
  *
- *  @param  errorMessage
+ *  @ param  errorMessage
  *
- *  @return NSString
+ *  @ return NSString
  */
 + (NSString *)swpChekNetworkError:(NSString *)errorMessage {
     return errorMessage == nil ? [SwpNetworkModel shareInstance].swpNetworkError : errorMessage;
 }
 
-/*!
- *  @author swp_song
+/**!
+ *  @ author swp_song
  *
- *  @brief  swpNetworkSetBaseURL:baseSet    ( 设置 接口 域名 和 主接口地址 )
+ *  @ brief  swpNetworkSetBaseURL:baseSet    ( 设置 接口 域名 和 主接口地址 )
  *
- *  @param  baseURL
+ *  @ param  baseURL
  *
- *  @param  baseSet
+ *  @ param  baseSet
  */
 + (void)swpNetworkSetBaseURL:(NSString *)baseURL baseSet:(NSString *)baseSet {
     [SwpNetworkModel shareInstance].swpNetworkBaseURL = baseURL;
