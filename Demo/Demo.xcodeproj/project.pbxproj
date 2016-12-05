@@ -32,6 +32,7 @@
 		2D9EA1291CF55AF20003B73C /* SwpRequestVariableType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpRequestVariableType.m; sourceTree = "<group>"; };
 		2D9EA12F1CF55B040003B73C /* SwpNetworkModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwpNetworkModel.h; sourceTree = "<group>"; };
 		2D9EA1301CF55B040003B73C /* SwpNetworkModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwpNetworkModel.m; sourceTree = "<group>"; };
+		2DE6FCB81DF4F56A0041148D /* SwpRequestHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwpRequestHeader.h; sourceTree = "<group>"; };
 		3AF79BE01FB342F3DC5C1CAC /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		4579CFE00EB8CF1FD01B157C /* libPods-Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46D299F51CBC96A300D4617E /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +81,7 @@
 				2D9EA1271CF55AF20003B73C /* SwpRequestTools.m */,
 				2D9EA1281CF55AF20003B73C /* SwpRequestVariableType.h */,
 				2D9EA1291CF55AF20003B73C /* SwpRequestVariableType.m */,
+				2DE6FCB81DF4F56A0041148D /* SwpRequestHeader.h */,
 			);
 			path = SwpNetworking;
 			sourceTree = "<group>";
@@ -182,7 +184,7 @@
 		46D299ED1CBC96A300D4617E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = swp_song;
 				TargetAttributes = {
 					46D299F41CBC96A300D4617E = {
@@ -321,8 +323,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -365,8 +369,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

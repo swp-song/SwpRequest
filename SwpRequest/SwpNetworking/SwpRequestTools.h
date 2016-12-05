@@ -11,45 +11,45 @@
 NS_ASSUME_NONNULL_BEGIN
 @interface SwpRequestTools : NSObject
 
-/*!
- *  @author swp_song
+/**!
+ *  @ author swp_song
  *
- *  @brief  swpRequestToolsSetNetworkActivityIndicatorVisible:  ( 显示 或 隐藏 网络获取数据时 UINavigationBar 上的图标 <转圈的菊花 > )
+ *  @ brief  swpRequestToolsSetNetworkActivityIndicatorVisible:  ( 显示 或 隐藏 网络获取数据时 UINavigationBar 上的图标 <转圈的菊花 > )
  *
- *  @param  networkActivityIndicatorVisible
+ *  @ param  networkActivityIndicatorVisible
  */
 + (void)swpRequestToolsSetNetworkActivityIndicatorVisible:(BOOL)networkActivityIndicatorVisible;
 
-/*!
- *  @author swp_song
+/**!
+ *  @ author swp_song
  *
- *  @brief  swpRequestToolsGetErrorMessage: ( 获取 错误信息 )
+ *  @ brief  swpRequestToolsGetErrorMessage: ( 获取 错误信息 )
  *
- *  @param  error
+ *  @ param  error
  *
- *  @return NSString
+ *  @ return NSString
  */
 + (NSString *)swpRequestToolsGetErrorMessage:(nullable NSError *)error;
 
-/*!
- *  @author swp_song
+/**!
+ *  @ author swp_song
  *
- *  @brief  swpRequestToolsGetDownloadFileName:  ( 取出 下载 文件名称 )
+ *  @ brief  swpRequestToolsGetDownloadFileName:  ( 取出 下载 文件名称 )
  *
- *  @param  filePath
+ *  @ param  filePath
  *
- *  @return NSString
+ *  @ return NSString
  */
 + (NSString *)swpRequestToolsGetDownloadFileName:(NSURL *)filePath;
 
-/*!
- *  @author swp_song
+/**!
+ *  @ author swp_song
  *
- *  @brief  swpRequestToolsDownloadFilePathDispose:  ( 下载 文件 路径处理 )
+ *  @ brief  swpRequestToolsDownloadFilePathDispose:  ( 下载 文件 路径处理 )
  *
- *  @param  filePath
+ *  @ param  filePath
  *
- *  @return NSString
+ *  @ return NSString
  */
 + (NSString *)swpRequestToolsDownloadFilePathDispose:(NSURL *)filePath;
 

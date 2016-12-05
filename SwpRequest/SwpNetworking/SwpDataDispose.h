@@ -12,29 +12,29 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SwpDataDispose : NSObject
 
 
-/*!
- *  @author swp_song
+/**!
+ *  @ author swp_song
  *
- *  @brief  swpDataRequestDecryptDispose:responseObject:isBase64:   ( 返回 数据 解密 处理 )
+ *  @ brief  swpDataRequestDecryptDispose:responseObject:isBase64:   ( 返回 数据 解密 处理 )
  *
- *  @param  responseObject
+ *  @ param  responseObject
  *
- *  @param  base64
+ *  @ param  base64
  *
- *  @return NSDictionary
+ *  @ return NSDictionary
  */
 + (NSDictionary *)swpDataRequestDecryptDispose:(id)responseObject isBase64:(BOOL)base64;
 
-/*!
- *  @author swp_song
+/**!
+ *  @ author swp_song
  *
- *  @brief  swpDataEncryptParams:encryptedKey:  ( 字典 加密 )
+ *  @ brief  swpDataEncryptParams:encryptedKey:  ( 字典 加密 )
  *
- *  @param  dictionary
+ *  @ param  dictionary
  *
- *  @param  encryptedKey
+ *  @ param  encryptedKey
  *
- *  @return
+ *  @ return NSDictionary
  */
 + (NSDictionary *)swpDataEncryptParams:(NSDictionary *)dictionary encryptedKey:(NSString *)encryptedKey;
 

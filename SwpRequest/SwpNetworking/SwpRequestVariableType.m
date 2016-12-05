@@ -1,6 +1,6 @@
 //
 //  SwpRequestVariableType.m
-//  Demo
+//  swp_song
 //
 //  Created by swp_song on 16/5/17.
 //  Copyright © 2016年 swp_song. All rights reserved.
@@ -11,17 +11,17 @@
 @implementation SwpRequestVariableType
 
 /*!
- *  @author swp_song
+ *  @ author swp_song
  *
- *  @brief  SwpDownloadProgress ( 快速初始化 表示下载进度的结构体 )
+ *  @ brief  SwpDownloadProgress ( 快速初始化 表示下载进度的结构体 )
  *
- *  @param  swpFractionCompleted
+ *  @ param  swpFractionCompleted
  *
- *  @param  swpTotalUnitCount
+ *  @ param  swpTotalUnitCount
  *
- *  @param  swpCompletedUnitCount
+ *  @ param  swpCompletedUnitCount
  *
- *  @return SwpDownloadProgress
+ *  @ return SwpDownloadProgress
  */
 SwpDownloadProgress SwpDownloadProgressMake(double swpFractionCompleted, swp_int64_t swpTotalUnitCount, swp_int64_t swpCompletedUnitCount) {
     SwpDownloadProgress swpDownloadProgress;

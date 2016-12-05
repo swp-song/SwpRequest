@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 /*! ---------------------- Tool       ---------------------- !*/
-#import <AFNetworking/AFNetworking.h>     // AFNetworking 网络库
+
 #import "SwpRequestVariableType.h"        // 自定 参数
 /*! ---------------------- Tool       ---------------------- !*/
 
@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param  swpResultError                  请求服务器失败
  */
-+ (void)swpPOST:(NSString *)URLString parameters:(nullable NSDictionary *)parameters isEncrypt:(BOOL)encrypt swpResultSuccess:(SwpResultSuccessHandle)swpResultSuccess swpResultError:(SwpResultErrorHandle)swpResultError;
++ (instancetype)swpPOST:(NSString *)URLString parameters:(nullable NSDictionary *)parameters isEncrypt:(BOOL)encrypt swpResultSuccess:(SwpResultSuccessHandle)swpResultSuccess swpResultError:(SwpResultErrorHandle)swpResultError;
 
 /*!
  *  @author swp_song
@@ -55,7 +55,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param  swpResultError                  请求服务器失败
  */
-+ (void)swpPOSTAddFile:(NSString *)URLString parameters:(nullable NSDictionary *)parameters isEncrypt:(BOOL)encrypt fileName:(NSString *)fileName fileData:(NSData *)fileData swpResultSuccess:(SwpResultSuccessHandle)swpResultSuccess swpResultError:(SwpResultErrorHandle)swpResultError;
++ (instancetype)swpPOSTAddFile:(NSString *)URLString parameters:(nullable NSDictionary *)parameters isEncrypt:(BOOL)encrypt fileName:(NSString *)fileName fileData:(NSData *)fileData swpResultSuccess:(SwpResultSuccessHandle)swpResultSuccess swpResultError:(SwpResultErrorHandle)swpResultError;
 
 /*!
  *  @author swp_song
@@ -76,7 +76,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param  swpResultError                  请求服务器失败
  */
-+ (void)swpPOSTAddFiles:(NSString *)URLString parameters:(nullable NSDictionary *)parameters isEncrypt:(BOOL)encrypt fileName:(NSString *)fileName fileDatas:(NSArray *)fileDatas swpResultSuccess:(SwpResultSuccessHandle)swpResultSuccess swpResultError:(SwpResultErrorHandle)swpResultError;
++ (instancetype)swpPOSTAddFiles:(NSString *)URLString parameters:(nullable NSDictionary *)parameters isEncrypt:(BOOL)encrypt fileName:(NSString *)fileName fileDatas:(NSArray *)fileDatas swpResultSuccess:(SwpResultSuccessHandle)swpResultSuccess swpResultError:(SwpResultErrorHandle)swpResultError;
 
 /*!
  *  @author swp_song
@@ -97,7 +97,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param  swpResultError                  请求服务器失败
  */
-+ (void)swpPOSTAddWithFiles:(NSString *)URLString parameters:(nullable NSDictionary *)parameters isEncrypt:(BOOL)encrypt fileNames:(NSArray *)fileNames fileDatas:(NSArray *)fileDatas swpResultSuccess:(SwpResultSuccessHandle)swpResultSuccess swpResultError:(SwpResultErrorHandle)swpResultError;
++ (instancetype)swpPOSTAddWithFiles:(NSString *)URLString parameters:(nullable NSDictionary *)parameters isEncrypt:(BOOL)encrypt fileNames:(NSArray *)fileNames fileDatas:(NSArray *)fileDatas swpResultSuccess:(SwpResultSuccessHandle)swpResultSuccess swpResultError:(SwpResultErrorHandle)swpResultError;
 
 /*!
  *  @author swp_song

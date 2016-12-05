@@ -1,6 +1,6 @@
 //
 //  SwpDataDispose.m
-//  Demo
+//  swp_song
 //
 //  Created by swp_song on 16/5/17.
 //  Copyright © 2016年 swp_song. All rights reserved.
@@ -17,16 +17,16 @@
 
 #pragma mark - Request Dispose Methods
 
-/*!
- *  @author swp_song
+/**!
+ *  @ author swp_song
  *
- *  @brief  swpDataRequestDecryptDispose:responseObject:isBase64:   ( 返回 数据 解密 处理 )
+ *  @ brief  swpDataRequestDecryptDispose:responseObject:isBase64:   ( 返回 数据 解密 处理 )
  *
- *  @param  responseObject
+ *  @ param  responseObject
  *
- *  @param  base64
+ *  @ param  base64
  *
- *  @return NSDictionary
+ *  @ return NSDictionary
  */
 + (NSDictionary *)swpDataRequestDecryptDispose:(id)responseObject isBase64:(BOOL)base64 {
     
@@ -49,16 +49,16 @@
     return dictionary;
 }
 
-/*!
- *  @author swp_song
+/**!
+ *  @ author swp_song
  *
- *  @brief  swpDataEncryptParams:encryptedKey:  ( 字典 加密 )
+ *  @ brief  swpDataEncryptParams:encryptedKey:  ( 字典 加密 )
  *
- *  @param  dictionary
+ *  @ param  dictionary
  *
- *  @param  encryptedKey
+ *  @ param  encryptedKey
  *
- *  @return
+ *  @ return
  */
 + (NSDictionary *)swpDataEncryptParams:(NSDictionary *)dictionary encryptedKey:(NSString *)encryptedKey{
     
@@ -86,14 +86,14 @@
     return returnDict;
 }
 
-/*!
- *  @author swp_song
+/**!
+ *  @ author swp_song
  *
- *  @brief  swpDataEncryptWithMD5:  ( MD5 加密 第一次加密  < 原理，app_key 整体加密，加密完毕之后，截取钱10位，在进行加密 >)
+ *  @ brief  swpDataEncryptWithMD5:  ( MD5 加密 第一次加密  < 原理，app_key 整体加密，加密完毕之后，截取钱10位，在进行加密 >)
  *
- *  @param  inputStr
+ *  @ param  inputStr
  *
- *  @return swpDataEncryptWithMD5
+ *  @ return swpDataEncryptWithMD5
  */
 + (NSString *)swpDataEncryptWithMD5:(NSString *)inputStr {
     const    char *cStr = [inputStr UTF8String];
@@ -106,14 +106,14 @@
     return [SwpDataDispose swpDataEncryptAgaincStr:[str lowercaseString]];
 }
 
-/*!
- *  @author swp_song
+/**!
+ *  @ author swp_song
  *
- *  @brief  swpDataEncryptAgaincStr:    ( 第二次取前十位进行加密 )
+ *  @ brief  swpDataEncryptAgaincStr:    ( 第二次取前十位进行加密 )
  *
- *  @param  inputStr
+ *  @ param  inputStr
  *
- *  @return NSString
+ *  @ return NSString
  */
 + (NSString *)swpDataEncryptAgaincStr:(NSString *)inputStr {
     NSString *sstr      = [inputStr substringToIndex:10];

@@ -1,6 +1,6 @@
 //
 //  SwpRequestVariableType.h
-//  Demo
+//  swp_song
 //
 //  Created by swp_song on 16/5/17.
 //  Copyright © 2016年 swp_song. All rights reserved.
@@ -20,6 +20,16 @@ typedef NS_ENUM(NSInteger, SwpResultReachabilityStatus) {
     SwpResultReachabilityStatusReachableViaWiFi = 2,    /*! WiFi        !*/
 };
 
+
+/*! 上传图片 状态  !*/
+typedef NS_ENUM(NSInteger, SwpResultUploadFileStatus) {
+    
+    SwpResultDoNotFileUpload = 0,
+    SwpResultSingleFileUpload,
+    SwpResultMultipleFilesUpload,
+    SwpResultMultiplePicturesUpload,
+};
+
 /*! SwpRequest 的请求成功 回调 Block !*/
 typedef void(^SwpResultSuccessHandle)(NSURLSessionDataTask *task, id resultObject);
 /*! SwpRequest 的请求失败 回调 Block !*/
@@ -34,17 +44,17 @@ struct SwpDownloadProgress {
 typedef struct SwpDownloadProgress SwpDownloadProgress;
 
 /*!
- *  @author swp_song
+ *  @ author swp_song
  *
- *  @brief  SwpDownloadProgress ( 快速初始化 表示下载进度的结构体 )
+ *  @ brief  SwpDownloadProgress ( 快速初始化 表示下载进度的结构体 )
  *
- *  @param  swpFractionCompleted
+ *  @ param  swpFractionCompleted
  *
- *  @param  swpTotalUnitCount
+ *  @ param  swpTotalUnitCount
  *
- *  @param  swpCompletedUnitCount
+ *  @ param  swpCompletedUnitCount
  *
- *  @return SwpDownloadProgress
+ *  @ return SwpDownloadProgress
  */
 SwpDownloadProgress SwpDownloadProgressMake(double swpFractionCompleted, swp_int64_t swpTotalUnitCount, swp_int64_t swpCompletedUnitCount);
 
