@@ -24,9 +24,22 @@ pod 'SwpRequest'
 ---
 #####[AFNetworking](https://github.com/AFNetworking/AFNetworking)     [Base64](https://github.com/nicklockwood/Base64)
 
+
 ---
 
-##### 1.1.1 更新:
+##### 1.1.3 更新:
+```Objective-C
+
+  1. 2016-12-05
+
+  2. 上传版本 冲突
+
+```
+
+
+---
+
+##### 1.1.2 更新:
 ```Objective-C
 
   1. 2016-12-05
