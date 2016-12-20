@@ -414,12 +414,16 @@
 #pragma Init AFHTTPSessionManager Methods
 - (AFHTTPSessionManager *)swpSessionManager {
     
-    if (!_swpSessionManager) {
-        _swpSessionManager                    = [AFHTTPSessionManager manager];
-        _swpSessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
-        [_swpSessionManager.responseSerializer setAcceptableContentTypes:[NSSet setWithObjects:@"application/json", @"text/json", @"text/html", @"text/css", @"text/javascript", nil]];
-    }
-    return _swpSessionManager;
+    return !_swpSessionManager ? _swpSessionManager = ({
+        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+        manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+        [manager.responseSerializer setAcceptableContentTypes:[NSSet setWithObjects:@"application/json", @"text/json", @"text/html", @"text/css", @"text/javascript", nil]];
+        manager.securityPolicy                          = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
+        manager.securityPolicy.allowInvalidCertificates = YES;
+        manager.securityPolicy.validatesDomainName      = NO;
+        manager;
+    }) : _swpSessionManager;
 }
 
 

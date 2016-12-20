@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name                  = "SwpRequest"
-  s.version               = "1.1.5"
+  s.version               = "1.2.0"
   s.ios.deployment_target = '7.0'
   s.summary               = " YouZhi Network Request API "
   s.homepage              = "https://github.com/swp-song/SwpRequest"

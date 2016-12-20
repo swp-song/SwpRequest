@@ -11,7 +11,8 @@
 #import "SwpRequestHeader.h"
 
 
-static NSString * const urlString = @"http://o2oservice.youzhiapp.com/test/test_list1";
+static NSString * const urlString1 = @"http://o2oservice.youzhiapp.com/test/test_list1";
+static NSString * const urlString2 = @"https://www.12306.cn/mormhweb/";
 
 @interface ViewController ()
 
@@ -24,7 +25,7 @@ static NSString * const urlString = @"http://o2oservice.youzhiapp.com/test/test_
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [self swpRequestGetData:urlString];
+    [self swpRequestGetData:urlString2];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,9 +38,10 @@ static NSString * const urlString = @"http://o2oservice.youzhiapp.com/test/test_
     NSDictionary *dictionary = @{
                                  @"app_key" : urlString,
                                  };
-    [SwpRequest swpPOST:urlString parameters:dictionary isEncrypt:YES swpResultSuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull resultObject) {
-        [SwpRequest swpRequestYouZhiPrintDataInformation:resultObject];
+    [SwpRequest swpPOST:urlString parameters:dictionary isEncrypt:NO swpResultSuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull resultObject) {
+//        [SwpRequest swpRequestYouZhiPrintDataInformation:resultObject];
         self.resultMessageView.text = @"请求成功...";
+        NSLog(@"%@", resultObject);
     } swpResultError:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error, NSString * _Nonnull errorMessage) {
         NSLog(@"%@", errorMessage);
         self.resultMessageView.text = errorMessage;

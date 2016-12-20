@@ -24,6 +24,18 @@ pod 'SwpRequest'
 ---
 #####[AFNetworking](https://github.com/AFNetworking/AFNetworking)     [Base64](https://github.com/nicklockwood/Base64)
 
+
+---
+
+##### 1.1.5 更新:
+```Objective-C
+
+  1. 2016-12-20 15:49:50
+
+  2. 支持 https 单项信任, 优化 内部方法
+
+```
+
 ---
 
 ##### 1.1.5 更新:
