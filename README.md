@@ -1,6 +1,6 @@
 # SwpRequest
 
-#####导入：
+##### 导入：
 
 ```
 手动导入：
@@ -11,7 +11,7 @@ SwpRequest 文件夹 导入 项目 中, 依赖  AFNetworking3.0 以上版本, Ba
 ---
 
 ```ruby
-x
+
 CocoaPods 导入:
 使用  CocoaPods 会自动 pod AFNetworking
 pod search SwpRequest
@@ -24,6 +24,21 @@ pod 'SwpRequest'
 ---
 #####[AFNetworking](https://github.com/AFNetworking/AFNetworking)     [Base64](https://github.com/nicklockwood/Base64)
 
+
+---
+
+##### 2.0.0 更新:
+```Objective-C
+
+1. 2017-01-13 09:09:46
+
+2. 新增 SwpRequest+MainInterface.h 获取主接口数据
+
+3. 优化内部方法
+
+4. Demo 优化
+
+```
 
 ---
 
