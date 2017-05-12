@@ -32,15 +32,16 @@
     
     // 转换成 字符串
     NSString *decodeJson = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-    NSLog(@"responseJson === > %@", decodeJson);
+    
+    [[self class] logMessage:[NSString stringWithFormat:@"responseJson === > %@", decodeJson]];
     decodeJson           = base64 ? [decodeJson base64DecodedString] : decodeJson;
     
     if (!decodeJson) {
-        NSLog(@"responseObject ===> %@", decodeJson);
+        [[self class] logMessage:[NSString stringWithFormat:@"responseJson === > %@", decodeJson]];
         return nil;
     }
     
-    NSLog(@"responseObject ===> %@", decodeJson);
+    [[self class] logMessage:[NSString stringWithFormat:@"responseJson === > %@", decodeJson]];
     
     // 字符串转成流
     NSData       *data = [decodeJson dataUsingEncoding:NSUTF8StringEncoding];
@@ -60,7 +61,7 @@
  *
  *  @ return
  */
-+ (NSDictionary *)swpDataEncryptParams:(NSDictionary *)dictionary encryptedKey:(NSString *)encryptedKey{
++ (NSDictionary *)swpDataEncryptParams:(NSDictionary *)dictionary encryptedKey:(NSString *)encryptedKey {
     
     //创建返回字典
     NSMutableDictionary* returnDict = [[NSMutableDictionary alloc]init];
@@ -125,6 +126,22 @@
         [mstr appendFormat:@"%02x",result[i]];
     }
     return [mstr lowercaseString];
+}
+
+
+/**!
+ *  @author swp_song
+ *
+ *  @brief  logMessage: ( 第二次取前十位进行加密 )
+ *
+ *  @param  message message
+ */
++ (void)logMessage:(NSString *)message {
+    #if DEBUG
+        NSLog(@"%@", message);
+    #else
+    
+    #endif
 }
 
 @end

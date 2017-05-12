@@ -144,9 +144,9 @@
  */
 + (NSString *)swpRequestToolsGetAppVersion {
 #if DEBUG
-    return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
+    return [[self class] swpRequestToolsBundleVersion];
 #else
-    return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+    return [[self class] swpRequestToolsBundleShortVersionString];
 #endif
     
 }

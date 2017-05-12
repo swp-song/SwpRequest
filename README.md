@@ -1,118 +1,77 @@
 # SwpRequest
 
+
+#### SwpRequest (简介):
+
+```
+1. 根据公司业务需求, 针对 AFNetworking3.0 以上版本进行封装, 数据加密进行处理
+```
+
+-------
+
 ##### 导入：
 
-```
-手动导入：
-
-SwpRequest 文件夹 导入 项目 中, 依赖  AFNetworking3.0 以上版本, Base64
-#import "SwpRequestHeader.h"
-```
----
+-------
 
 ```ruby
 
-CocoaPods 导入:
-使用  CocoaPods 会自动 pod AFNetworking
-pod search SwpRequest
+1. 手动导入：
 
-pod 'SwpRequest'
+ 	* SwpRequest 文件夹 导入 项目 中
 
-#import <SwpRequest/SwpRequestHeader.h>
+	* #import "SwpRequestHeader"     // 头文件
 
-```
----
-#####[AFNetworking](https://github.com/AFNetworking/AFNetworking)     [Base64](https://github.com/nicklockwood/Base64)
+  * 依赖库 Base64, AFNetworking3.0 以上版, 需要手动导入
 
 
----
 
-##### 2.0.0 更新:
-```Objective-C
+  2. CocoaPods 导入:
 
-1. 2017-01-13 09:09:46
+  	* pod search SwpRequest
 
-2. 新增 SwpRequest+MainInterface.h 获取主接口数据
+  	* pod 'SwpRequest'
 
-3. 优化内部方法
+  	* #import <SwpRequest/SwpRequestHeader.h>	// 常用 工具类
 
-4. Demo 优化
+    * pod 导入会自动添加依赖库, 无需手动导入
 
 ```
+**...更多工具请查看 Demo**
 
----
+-------
 
-##### 1.1.5 更新:
-```Objective-C
+##### [AFNetworking](https://github.com/AFNetworking/AFNetworking)   
 
-  1. 2016-12-20 15:49:50
+##### [Base64](https://github.com/nicklockwood/Base64)
 
-  2. 支持 https 单项信任, 优化 内部方法
 
+-------
+
+##### 版本记录
+
+-------
+```
+1. 版本版本: 2.0.1
+
+2. 更新时间: 2017-05-12 14:13:09
+
+3. 更新内容:
+    1. 修改打印信息
+    
 ```
 
----
+-------
 
-##### 1.1.5 更新:
-```Objective-C
 
-  1. 2016-12-05 11:09:08
-
-  2. 优化内部方法, 备注
-
+#### 备注：
+```
+持续更新, 如果喜欢, 欢迎 Star
 ```
 
----
+-------
 
+#### 声明:
 
-##### 1.1.4 更新:
-```Objective-C
+**著作权归 ©swp_song, 如需转载请标明出处**
 
-  1. 2016-12-05 10:35:24
-
-  2. 优化 代码, 更新代码 备注
-
-```
-
----
-
-##### 1.1.3 更新:
-```Objective-C
-
-  1. 2016-12-05
-
-  2. 上传版本 冲突
-
-```
-
-
----
-
-##### 1.1.2 更新:
-```Objective-C
-
-  1. 2016-12-05
-
-  2. 优化 上传图片崩溃问题
-
-```
-
----
-
-##### 1.1.1 更新:
-
-```Objective-C
-
-  1. 2016-12-05
-
-  2. 代码重构整合, 上传测试
-
-```
-
----
-
-#####备注：
-```
-O(∩_∩)O,  如果有加密相同的 欢迎使用，持续 更新。。。
-```
----
+-------
