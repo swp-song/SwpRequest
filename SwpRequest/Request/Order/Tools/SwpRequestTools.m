@@ -9,61 +9,59 @@
 #import "SwpRequestTools.h"
 
 /*! ---------------------- Tool       ---------------------- !*/
-#import <ifaddrs.h>                     // 获取 设备IP   使用
-#import <arpa/inet.h>                   // 获取 设备IP   使用
-#import <sys/utsname.h>                 // 获取 设备类型 使用
-#import <UIKit/UIKit.h>                 // UIKit
+#import <ifaddrs.h>         // 获取 设备IP   使用
+#import <arpa/inet.h>       // 获取 设备IP   使用
+#import <sys/utsname.h>     // 获取 设备类型 使用
+#import <UIKit/UIKit.h>     // UIKit
 /*! ---------------------- Tool       ---------------------- !*/
 
 @implementation SwpRequestTools
 
 /**!
- *  @ author swp_song
+ *  @author swp_song
  *
- *  @ brief  swpRequestToolsSetNetworkActivityIndicatorVisible:  ( 显示 或 隐藏 网络获取数据时 UINavigationBar 上的图标 <转圈的菊花 > )
+ *  @brief  swpRequestToolsSetNetworkActivityIndicatorVisible:  ( 显示 或 隐藏 网络获取数据时 UINavigationBar 上的图标 <转圈的菊花 > )
  *
- *  @ param  networkActivityIndicatorVisible
+ *  @param  networkActivityIndicatorVisible networkActivityIndicatorVisible
  */
 + (void)swpRequestToolsSetNetworkActivityIndicatorVisible:(BOOL)networkActivityIndicatorVisible {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = networkActivityIndicatorVisible;
 }
 
 /**!
- *  @ author swp_song
+ *  @author swp_song
  *
- *  @ brief  swpRequestToolsGetErrorMessage: ( 获取 错误信息 )
+ *  @brief  swpRequestToolsGetErrorMessage: ( 获取 错误信息 )
  *
- *  @ param  error
+ *  @param  error       error
  *
- *  @ return NSString
+ *  @return NSString    NSString
  */
 + (NSString *)swpRequestToolsGetErrorMessage:(NSError *)error {
     return error == nil ? nil : [NSString stringWithFormat:@"错误代码%ld \n 错误信息%@", (long)error.code, error.localizedDescription];
 }
 
-
-
 /**!
- *  @ author swp_song
+ *  @author swp_song
  *
- *  @ brief  swpRequestToolsDownloadFilePathDispose:  ( 下载 文件 路径处理 )
+ *  @brief  swpRequestToolsDownloadFilePathDispose:  ( 下载 文件 路径处理 )
  *
- *  @ param  filePath
+ *  @param  filePath    filePath
  *
- *  @ return NSString
+ *  @return NSString
  */
 + (NSString *)swpRequestToolsDownloadFilePathDispose:(NSURL *)filePath {
     return [NSString stringWithFormat:@"%@/%@", [self swpRequestToolsGetDocumentsPath], [self swpRequestToolsGetDownloadFileName:filePath]];
 }
 
 /**!
- *  @ author swp_song
+ *  @author swp_song
  *
- *  @ brief  swpRequestToolsGetDownloadFileName:  ( 取出 下载 文件名称 )
+ *  @brief  swpRequestToolsGetDownloadFileName:  ( 取出 下载 文件名称 )
  *
- *  @ param  filePath
+ *  @param  filePath    filePath
  *
- *  @ return NSString
+ *  @return NSString
  */
 + (NSString *)swpRequestToolsGetDownloadFileName:(NSURL *)filePath {
     NSString *filePathString = [NSString stringWithFormat:@"%@", filePath];
@@ -71,11 +69,11 @@
 }
 
 /**!
- *  @ author swp_song
+ *  @author swp_song
  *
- *  @ brief  swpRequestToolsGetDocumentsPath  ( 取出 documents 文件路径 )
+ *  @brief  swpRequestToolsGetDocumentsPath  ( 取出 documents 文件路径 )
  *
- *  @ return NSString
+ *  @return NSString
  */
 + (NSString *)swpRequestToolsGetDocumentsPath {
     NSArray  *paths          = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -84,17 +82,17 @@
 }
 
 /**!
- *  @ author swp_song
+ *  @author swp_song
  *
- *  @ brief  swpRequestToolsMasterInterfaceParametersHandling:setAppKey:setAppKeyValue: ( 设置 主接口 提交数据 app_key )
+ *  @brief  swpRequestToolsMasterInterfaceParametersHandling:setAppKey:setAppKeyValue: ( 设置 主接口 提交数据 app_key )
  *
- *  @ param  parameters
+ *  @param  parameters  parameters
  *
- *  @ param  appKey
+ *  @param  appKey      appKey
  *
- *  @ param  appKeyValue
+ *  @param  appKeyValue appKeyValue
  *
- *  @ return NSDictionary
+ *  @return NSDictionary
  */
 + (NSDictionary *)swpRequestToolsMasterInterfaceParametersHandling:(NSDictionary *)parameters setAppKey:(NSString *)appKey setAppKeyValue:(NSString *)appKeyValue {
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionaryWithDictionary:parameters];
@@ -104,15 +102,15 @@
 
 
 /**!
- *  @ author swp_song
+ *  @author swp_song
  *
- *  @ brief  swpRequestToolsUserDefaultSetObject:forKey: ( 存储 UserDefault )
+ *  @brief  swpRequestToolsUserDefaultSetObject:forKey: ( 存储 UserDefault )
  *
- *  @ param  object
+ *  @param  object  object
  *
- *  @ param  key
+ *  @param  key     key
  *
- *  @ return BOOL
+ *  @return BOOL
  */
 + (BOOL)swpRequestToolsUserDefaultSetObject:(id)object forKey:(NSString *)key {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -121,13 +119,13 @@
 }
 
 /**!
- *  @ author swp_song
+ *  @author swp_song
  *
- *  @ brief  swpRequestToolsUserDefaultGetObject:    ( 取出 NSUserDefaults 存储的数据 )
+ *  @brief  swpRequestToolsUserDefaultGetObject:    ( 取出 NSUserDefaults 存储的数据 )
  *
- *  @ param  key
+ *  @param  key key
  *
- *  @ return id
+ *  @return id
  */
 + (id)swpRequestToolsUserDefaultGetObject:(NSString *)key {
     return [[NSUserDefaults standardUserDefaults] objectForKey:key];
@@ -136,11 +134,11 @@
 
 
 /**!
- *  @ author swp_song
+ *  @author swp_song
  *
- *  @ brief  swpRequestToolsGetAppVersion   ( 获取 系统 版本号 < 无需自己判断 > )
+ *  @brief  swpRequestToolsGetAppVersion   ( 获取 系统 版本号 < 无需自己判断 > )
  *
- *  @ return NSString
+ *  @return NSString
  */
 + (NSString *)swpRequestToolsGetAppVersion {
 #if DEBUG
@@ -152,49 +150,60 @@
 }
 
 /**!
- *  @ author swp_song
+ *  @author swp_song
  *
- *  @ brief  swpRequestToolsBundleVersion   ( 获取 系统 版本号 Production )
+ *  @brief  swpRequestToolsBundleVersion   ( 获取 系统 版本号 Production )
  *
- *  @ return NSString
+ *  @return NSString
  */
 + (NSString *)swpRequestToolsBundleVersion {
     return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
 }
 
 /**!
- *  @ author swp_song
+ *  @author swp_song
  *
- *  @ brief  swpRequestToolsBundleVersion   ( 获取 系统 版本号 Development )
+ *  @brief  swpRequestToolsBundleVersion   ( 获取 系统 版本号 Development )
  *
- *  @ return NSString
+ *  @return NSString
  */
 + (NSString *)swpRequestToolsBundleShortVersionString {
     return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
 }
 
+/**!
+ *  @author swp_song
+ *
+ *  @brief  swpRequestToolsGetSwpRequestVersion ( 获取 SwpRequest 版本号 )
+ *
+ *   @return NSString
+ */
++ (NSString *)swpRequestToolsGetSwpRequestVersion {
+    NSString     *path    = [NSBundle.mainBundle pathForResource:@"SwpRequest.bundle/SwpRequestInfo" ofType:@"plist"];
+    NSDictionary *message = [NSDictionary dictionaryWithContentsOfFile:path];
+    return message[@"SwpRequestVersion"];
+}
+
 
 /**!
- *  @ author swp_song
+ *  @author swp_song
  *
- *  @ brief  swpRequestToolsCheckStringMessage: ( 验证字符串 信息 )
+ *  @brief  swpRequestToolsCheckStringMessage: ( 验证字符串 信息 )
  *
- *  @ param  string
+ *  @param  string  string
  *
- *  @ return NSString
+ *  @return NSString
  */
 + (NSString *)swpRequestToolsCheckStringMessage:(NSString *)string {
     return string ? string : @"";
 }
 
-
-
 /**!
- *  @ author swp_song
+ *  @author swp_song
  *
- *  @ brief  swpRequestToolsGetIphoneIpAddress ( 获取 当前 设备的 Ip 地址 )
+ *  @brief  swpRequestToolsGetIphoneIpAddress ( 获取 当前 设备的 Ip 地址 )
  *
- *  @ return NSString Ip
+ *  @return NSString
  */
 + (NSString *)swpRequestToolsGetIphoneIpAddress {
     
@@ -224,11 +233,11 @@
 }
 
 /**!
- *  @ author swp_song
+ *  @author swp_song
  *
- *  @ brief  swpRequestToolsDeviceDeviceType: ( 获取 设备 类型 )
+ *  @brief  swpRequestToolsDeviceDeviceType: ( 获取 设备 类型 )
  *
- *  @ return NSString
+ *  @return NSString
  */
 + (NSString *)swpRequestToolsDeviceDeviceType {
    
@@ -295,6 +304,58 @@
     if ([deviceType isEqualToString:@"iPad4,7"] || [deviceType isEqualToString:@"iPad4,8"] || [deviceType isEqualToString:@"iPad4,9"])   return @"iPad mini 3";
     
     return deviceType;
+}
+
+/**!
+ *  @author swp_song
+ *
+ *  @brief  swpRequestToolsGetSystemMessageDictionary:  ( 获取 系统 信息 )
+ *
+ *  @return NSDictionary
+ */
++ (NSDictionary *)swpRequestToolsGetSystemMessageDictionary {
+    NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
+    [dictionary setObject:@"苹果" forKey:@"brand"];
+    [dictionary setObject:@"iPhone" forKey:@"device_type"];
+    [dictionary setObject:UIDevice.currentDevice.model forKey:@"model"];
+    [dictionary setObject:UIDevice.currentDevice.systemName forKey:@"sys_type"];
+    [dictionary setObject:UIDevice.currentDevice.systemVersion forKey:@"sys_version"];
+    [dictionary setObject:UIDevice.currentDevice.identifierForVendor.UUIDString forKey:@"uuid"];
+    [dictionary setObject:UIDevice.currentDevice.name forKey:@"name"];
+    
+#pragma mark - User Get
+    
+    [dictionary setObject:[SwpRequestTools swpRequestToolsGetAppVersion] forKey:@"cr_version"];
+    [dictionary setObject:[SwpRequestTools swpRequestToolsGetIphoneIpAddress] forKey:@"user_ip"];
+    [dictionary setObject:[SwpRequestTools swpRequestToolsDeviceDeviceType] forKey:@"device_type"];
+    
+    return dictionary.copy;
+}
+
+/**!
+ *  @author swp_song
+ *
+ *  @brief  swpRequestToolsResultDecrypt:   ( 返回数据处理 )
+ *
+ *  @param  responseObject  responseObject
+ *
+ *  @return NSDictionary
+ */
++ (NSDictionary *)swpRequestToolsResultDecrypt:(id)responseObject {
+    
+    NSString    *decodeJson = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+    
+    NSLog(@" request the result = %@", decodeJson);
+    
+    if (!decodeJson) return nil;
+    
+    // 字符串转成流
+    NSData       *data        = [decodeJson dataUsingEncoding:NSUTF8StringEncoding];
+    // 转换字典
+    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+    
+    NSLog(@" data analysis = %@", dictionary);
+    return dictionary;
 }
 
 

@@ -10,6 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+FOUNDATION_EXPORT NSString * const kSwpRequestCachedDataKey;
+
 @interface SwpRequest (MainInterface)
 
 
@@ -21,17 +23,6 @@ NS_ASSUME_NONNULL_BEGIN
  *  @ return NSDictionary
  */
 + (NSDictionary *)swpRequestGetSystemMessageDictionary;
-
-/**!
- *  @ author swp_song
- *
- *  @ brief  swpRequestGetSystemMessageDictionary:  ( 获取 系统 信息 )
- *
- *  @ param  appVersionStatus
- *
- *  @ return NSDictionary
- */
-+ (NSDictionary *)swpRequestGetSystemMessageDictionary:(SwpRequestMasterInterfaceAppVersionStatus)appVersionStatus;
 
 /**!
  *  @ author swp_song
@@ -58,14 +49,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)swpRequestGetMasterInterfaceData:(nullable NSDictionary *)parameters resultSuccess:(nullable void(^)(NSDictionary *resultObject))resultSuccess resultError:(nullable void(^)(NSInteger error, NSString *errorMessage))resultError;
 
 #pragma mark - MainInterface Get Data 
-/**!
- *  @ author swp_song
- *
- *  @ brief  swpRequestGetCachedDataKey ( 取出 缓存 主接口数据 Key )
- *
- *  @ return NSString
- */
-+ (NSString *)swpRequestGetCachedDataKey;
 
 /**!
  *  @ author swp_song

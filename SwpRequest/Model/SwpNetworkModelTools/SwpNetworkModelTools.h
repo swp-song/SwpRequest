@@ -12,28 +12,28 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SwpNetworkModelTools : NSObject
 
 /**!
- *  @ author swp_song
+ *  @author swp_song
  *
- *  @ brief  swpNetworkModelToolsGetDomainName:setMainInterface:  ( 取出 设置的 域名 )
+ *  @brief  swpNetworkModelToolsGetDomainName:setMainInterface:  ( 取出 设置的 域名 )
  *
- *  @ param  domainName
+ *  @param  domainName          domainName
  *
- *  @ param  mainInterfaceURL
+ *  @param  mainInterfaceURL    mainInterfaceURL
  *
- *  @ return NSString
+ *  @return NSString
  */
 + (NSString *)swpNetworkModelToolsGetDomainName:(NSString *)domainName setMainInterface:(NSString *)mainInterfaceURL;
 
 /**!
- *  @ author swp_song
+ *  @author swp_song
  *
- *  @ brief  swpNetworkModelToolsGetMainInterfaceURL:setMainInterface:  ( 取出 设置 主接口 名称 )
+ *  @brief  swpNetworkModelToolsGetMainInterfaceURL:setMainInterface:  ( 取出 设置 主接口 名称 )
  *
- *  @ param  domainName
+ *  @param  domainName          domainName
  *
- *  @ param  mainInterfaceURL
+ *  @param  mainInterfaceURL    mainInterfaceURL
  *
- *  @ return NSString
+ *  @return NSString
  */
 + (NSString *)swpNetworkModelToolsGetMainInterfaceURL:(NSString *)domainName setMainInterface:(NSString *)mainInterfaceURL;
 

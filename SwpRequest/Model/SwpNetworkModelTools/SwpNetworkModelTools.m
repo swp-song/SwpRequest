@@ -14,47 +14,47 @@ static NSString * const kSwpNetworkMainInterfaceURL = @"SwpNetworkMainInterfaceU
 @implementation SwpNetworkModelTools
 
 /**!
- *  @ author swp_song
+ *  @return swp_song
  *
- *  @ brief  swpNetworkModelToolsGetDomainName:setMainInterface:  ( 取出 设置的 域名 )
+ *  @brief  swpNetworkModelToolsGetDomainName:setMainInterface:  ( 取出 设置的 域名 )
  *
- *  @ param  domainName
+ *  @param  domainName          domainName
  *
- *  @ param  mainInterfaceURL
+ *  @param  mainInterfaceURL    mainInterfaceURL
  *
- *  @ return NSString
+ *  @return NSString
  */
 + (NSString *)swpNetworkModelToolsGetDomainName:(NSString *)domainName setMainInterface:(NSString *)mainInterfaceURL {
-    return [[self class] swpNetworkModelToolsDomainNameHandling:domainName setMainInterface:mainInterfaceURL][kSwpNetworkDomainNameKey];
+    return [self.class swpNetworkModelToolsDomainNameHandling:domainName setMainInterface:mainInterfaceURL][kSwpNetworkDomainNameKey];
 }
 
 /**!
- *  @ author swp_song
+ *  @return swp_song
  *
- *  @ brief  swpNetworkModelToolsGetMainInterfaceURL:setMainInterface:  ( 取出 设置 主接口 名称 )
+ *  @brief  swpNetworkModelToolsGetMainInterfaceURL:setMainInterface:  ( 取出 设置 主接口 名称 )
  *
- *  @ param  domainName
+ *  @param  domainName          domainName
  *
- *  @ param  mainInterfaceURL
+ *  @param  mainInterfaceURL    mainInterfaceURL
  *
- *  @ return NSString
+ *  @return NSString
  */
 + (NSString *)swpNetworkModelToolsGetMainInterfaceURL:(NSString *)domainName setMainInterface:(NSString *)mainInterfaceURL {
-    return [[self class] swpNetworkModelToolsDomainNameHandling:domainName setMainInterface:mainInterfaceURL][kSwpNetworkMainInterfaceURL];
+    return [self.class swpNetworkModelToolsDomainNameHandling:domainName setMainInterface:mainInterfaceURL][kSwpNetworkMainInterfaceURL];
 }
 
 
 
 /**!
- *  @ author swp_song
+ *  @return swp_song
  *
- *  @ brief  swpNetworkModelToolsDomainNameHandling:setMainInterface:( 取出 设置 主接口 名称 )
+ *  @brief  swpNetworkModelToolsDomainNameHandling:setMainInterface:( 取出 设置 主接口 名称 )
  *
- *  @ param  domainName
+ *  @param  domainName          domainName
  *
- *  @ param  mainInterfaceURL
+ *  @param  mainInterfaceURL    mainInterfaceURL
  *
- *  @ return NSDictionary
+ *  @return NSDictionary
  */
 + (NSDictionary *)swpNetworkModelToolsDomainNameHandling:(NSString *)domainName setMainInterface:(NSString *)mainInterfaceURL {
     NSString *type0 = domainName.copy;
@@ -76,15 +76,15 @@ static NSString * const kSwpNetworkMainInterfaceURL = @"SwpNetworkMainInterfaceU
 
 
 /**!
- *  @ author swp_song
+ *  @return swp_song
  *
- *  @ brief  swpNetworkModelToolsDomainNamePacking:setMainInterface:    ( 包装成 一个字典 )
+ *  @brief  swpNetworkModelToolsDomainNamePacking:setMainInterface:    ( 包装成 一个字典 )
  *
- *  @ param  domainName
+ *  @param  domainName          domainName
  *
- *  @ param  mainInterfaceURL
+ *  @param  mainInterfaceURL    mainInterfaceURL
  *
- *  @ return NSDictionary
+ *  @return NSDictionary
  */
 + (NSDictionary *)swpNetworkModelToolsDomainNamePacking:(NSString *)domainName setMainInterface:(NSString *)mainInterfaceURL {
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
