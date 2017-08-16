@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SwpRequest'
 
-  s.version          = '2.3.9'
+  s.version          = '2.4.0'
 
   s.summary          = ' swp-song Request api. '
 
@@ -33,9 +33,9 @@ Pod::Spec.new do |s|
   # s.source_files = 'SwpRequest/SwpRequest.framework/Headers/**/*.{h,m}'
   # s.resource     = 'SwpRequest/SwpRequest.framework/Resources/SwpRequest.bundle'
 
-  s.requires_arc  = true
-  s.frameworks    = 'UIKit', 'Foundation'
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+  s.requires_arc        = true
+  s.frameworks          = 'UIKit', 'Foundation'
+  s.public_header_files = 'SwpRequest/SwpRequest.framework/Headers/**/*.h'
 
   s.dependency 'AFNetworking'
   s.dependency 'Base64nl'
