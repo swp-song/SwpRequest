@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SwpRequest'
 
-  s.version          = '2.4.5'
+  s.version          = '2.4.6'
 
   s.summary          = ' swp-song Request api. '
 
@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.vendored_frameworks = 'SwpRequest/*'
+  s.vendored_frameworks = 'SwpRequest/SwpRequest.framework'
 
   s.requires_arc        = true
   s.frameworks          = 'UIKit', 'Foundation'
