@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SwpRequest'
 
-  s.version          = '2.3.3'
+  s.version          = '2.3.4'
 
   s.summary          = ' swp-song Request api. '
 
@@ -29,12 +29,9 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'SwpRequest/Classes/**/*'
-  # s.resource     = 'SwpRequest/Classes/SwpRequest/Resources/*'
+  s.source_files = 'SwpRequest/SwpRequest.framework/Headers/*'
+  s.resource     = 'SwpRequest/SwpRequest.framework/Resources/*'
 
-  s.resource_bundles = {
-    'SwpRequest.bundle' => ['SwpRequest/SwpRequest.framework/Resources/SwpRequest.bundle']
-  }
   s.requires_arc  = true
   s.frameworks    = 'UIKit', 'Foundation'
   # s.public_header_files = 'Pod/Classes/**/*.h'
