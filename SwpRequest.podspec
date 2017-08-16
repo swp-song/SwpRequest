@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SwpRequest'
 
-  s.version          = '2.4.6'
+  s.version          = '2.4.7'
 
   s.summary          = ' swp-song Request api. '
 
@@ -33,6 +33,7 @@ Pod::Spec.new do |s|
 
   s.requires_arc        = true
   s.frameworks          = 'UIKit', 'Foundation'
+  s.public_header_files = 'SwpRequest/**/*.h'
 
 
   s.dependency 'AFNetworking'
