@@ -1,6 +1,0 @@
-framework module SwpRequest {
-  umbrella header "SwpRequest-umbrella.h"
-
-  export *
-  module * { export * }
-}

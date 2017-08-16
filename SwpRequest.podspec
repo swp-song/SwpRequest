@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SwpRequest'
 
-  s.version          = '2.2.3'
+  s.version          = '2.3.3'
 
   s.summary          = ' swp-song Request api. '
 
@@ -19,7 +19,6 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  # s.description      = <<-DESC TODO: Add long description of the pod here. DESC
 
   s.homepage         = 'https://github.com/swp-song/SwpRequest'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
@@ -31,12 +30,11 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'SwpRequest/Classes/**/*'
-  s.resource     = 'SwpRequest/Assets/*', 'SwpRequest/Classes/SwpRequest/Resources/*'
+  # s.resource     = 'SwpRequest/Classes/SwpRequest/Resources/*'
 
-  # s.resource_bundles = {
-  #   'SwpRequest' => ['SwpRequest/Assets/*.png']
-  #   'SwpRequest.bundle' => ['SwpRequest/Classes/SwpRequest/Resources/SwpRequest.bundle']
-  # }
+  s.resource_bundles = {
+    'SwpRequest.bundle' => ['SwpRequest/SwpRequest.framework/Resources/SwpRequest.bundle']
+  }
   s.requires_arc  = true
   s.frameworks    = 'UIKit', 'Foundation'
   # s.public_header_files = 'Pod/Classes/**/*.h'
