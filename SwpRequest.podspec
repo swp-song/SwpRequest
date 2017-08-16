@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SwpRequest'
 
-  s.version          = '2.3.4'
+  s.version          = '2.3.5'
 
   s.summary          = ' swp-song Request api. '
 
@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'SwpRequest/SwpRequest.framework/Headers/*'
+  s.source_files = 'SwpRequest/SwpRequest.framework/Headers/*.h'
   s.resource     = 'SwpRequest/SwpRequest.framework/Resources/*'
 
   s.requires_arc  = true
