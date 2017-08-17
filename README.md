@@ -1,9 +1,12 @@
 # SwpRequest
 
-[![CI Status](http://img.shields.io/travis/swp-song/SwpRequest.svg?style=flat)](https://travis-ci.org/swp-song/SwpRequest)
+
 [![Version](https://img.shields.io/cocoapods/v/SwpRequest.svg?style=flat)](http://cocoapods.org/pods/SwpRequest)
+
 [![License](https://img.shields.io/cocoapods/l/SwpRequest.svg?style=flat)](http://cocoapods.org/pods/SwpRequest)
+
 [![Platform](https://img.shields.io/cocoapods/p/SwpRequest.svg?style=flat)](http://cocoapods.org/pods/SwpRequest)
+
 
 ## Example
 
@@ -27,3 +30,5 @@ swp-song, 396587868@qq.com
 ## License
 
 SwpRequest is available under the MIT license. See the LICENSE file for more info.
+
+
