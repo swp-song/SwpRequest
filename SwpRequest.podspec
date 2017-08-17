@@ -7,11 +7,14 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'SwpRequest'
 
-  s.version          = '2.4.8'
+  s.name              = 'SwpRequest'
+  
+  s.version           = "2.5.0"
 
-  s.summary          = ' swp-song Request api. '
+  s.summary           = "Swp-Song Request Api."
+
+  s.description       = "TODO: Swp-Song Request Api."
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -27,14 +30,11 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/swp-song/SwpRequest.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
-
-  s.vendored_frameworks = 'SwpRequest/SwpRequest.framework'
-
-  s.requires_arc        = true
-  s.frameworks          = 'UIKit', 'Foundation'
-#s.public_header_files = 'SwpRequest/**/*.h'
-
+  s.vendored_frameworks       = 'SwpRequestFramework/SwpRequestFramework.framework'
+  s.requires_arc              = true
+  s.frameworks                = ["UIKit", "Foundation"]
+  s.ios.deployment_target     = '8.0'
+  s.ios.vendored_framework    = 'ios/SwpRequestFramework.framework'
 
   s.dependency 'AFNetworking'
   s.dependency 'Base64nl'
