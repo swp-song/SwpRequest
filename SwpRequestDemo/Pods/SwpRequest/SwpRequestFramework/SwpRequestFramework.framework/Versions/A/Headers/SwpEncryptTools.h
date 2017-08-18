@@ -11,18 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 @interface SwpEncryptTools : NSObject
 
-/**!
- *  @author swp_song
- *
- *  @brief  swpEncryptToolsMD5: ( 字符串 MD5 加密 )
- *
- *  @param  string  string
- *
- *  @return NSString
- */
-+ (NSString *)swpEncryptToolsMD5:(NSString *)string;
-
-/**!
+/**
  *  @author swp_song
  *
  *  @brief  swpEncryptToolsResultDecrypt:   ( 返回数据解密处理 )
@@ -33,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (NSDictionary *)swpEncryptToolsResultDecrypt:(id)responseObject;
 
-/**!
+/**
  *  @author swp_song
  *
  *  @brief  swpEncryptToolsEncryptParams:encryptedKey:interceptRange:   ( 参数加密 )

@@ -14,18 +14,15 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - Base64nl (1.2)
-  - SwpRequest (2.5.0):
+  - SwpRequest (2.5.8):
     - AFNetworking
-    - Base64nl
 
 DEPENDENCIES:
   - SwpRequest
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  Base64nl: a497bdcd1c01ea793d36b399016195a8713c0e95
-  SwpRequest: 63f98f4e87d80cf5c8584ee97b5109d8b4cf134b
+  SwpRequest: c89df06efee34a4b1f5a791ebf0c8f2a436a0bc9
 
 PODFILE CHECKSUM: 0d94a48142570a035246a5f46b022fc3ecd8eabf
 

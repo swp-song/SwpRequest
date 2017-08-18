@@ -15,7 +15,7 @@ FOUNDATION_EXPORT NSString * const kSwpRequestCachedDataKey;
 @interface SwpRequest (MainInterface)
 
 
-/**!
+/**
  *  @ author swp_song
  *
  *  @ brief  swpRequestGetSystemMessageDictionary:  ( 获取 系统 信息 )
@@ -24,7 +24,7 @@ FOUNDATION_EXPORT NSString * const kSwpRequestCachedDataKey;
  */
 + (NSDictionary *)swpRequestGetSystemMessageDictionary;
 
-/**!
+/**
  *  @ author swp_song
  *
  *  @ brief  swpRequestSetNetworkEnvironment:setMainInterface: ( 设置 网络环境 )
@@ -35,7 +35,7 @@ FOUNDATION_EXPORT NSString * const kSwpRequestCachedDataKey;
  */
 + (void)swpRequestSetNetworkEnvironment:(NSString *)domainName setMainInterface:(NSString *)mainInterfaceURL;
 
-/**!
+/**
  *  @ author swp_song
  *
  *  @ brief  swpRequestGetMasterInterfaceData:resultSuccess:resultError: ( 获取出接口数据 )
@@ -50,7 +50,7 @@ FOUNDATION_EXPORT NSString * const kSwpRequestCachedDataKey;
 
 #pragma mark - MainInterface Get Data 
 
-/**!
+/**
  *  @ author swp_song
  *
  *  @ brief  swpRequestGetMasterInterfaceCachedData    ( 取出 缓存 数据 )
@@ -59,7 +59,7 @@ FOUNDATION_EXPORT NSString * const kSwpRequestCachedDataKey;
  */
 + (id)swpRequestGetMasterInterfaceCachedData;
 
-/**!
+/**
  *  @ author swp_song
  *
  *  @ brief  swpRequestGetMasterInterfaceCachedDataWith:    ( 取出 根据 key 取出缓存中的数据  )
@@ -71,7 +71,7 @@ FOUNDATION_EXPORT NSString * const kSwpRequestCachedDataKey;
 + (id)swpRequestGetMasterInterfaceCachedDataWith:(NSString *)key;
 
 
-/**!
+/**
  *  @ author swp_song
  *
  *  @ brief  swpRequestGetMasterInterfaceCachedDataWith:    ( 取出 根据 key 取出缓存中的数据  )
@@ -80,7 +80,7 @@ FOUNDATION_EXPORT NSString * const kSwpRequestCachedDataKey;
  */
 + (NSDictionary *)swpRequestGetMasterInterfaceUrls;
 
-/**!
+/**
  *  @ author swp_song
  *
  *  @ brief  swpRequestGetMasterInterfaceUrl:   ( 取出 根据 key 取出缓存中的数据  )
@@ -91,7 +91,7 @@ FOUNDATION_EXPORT NSString * const kSwpRequestCachedDataKey;
  */
 + (NSString *)swpRequestGetMasterInterfaceUrl:(NSString *)key;
 
-/**!
+/**
  *  @ author swp_song
  *
  *  @ brief  swpRequestGetMasterInterfaceToken  ( 取出 token )
@@ -100,7 +100,7 @@ FOUNDATION_EXPORT NSString * const kSwpRequestCachedDataKey;
  */
 + (NSString *)swpRequestGetMasterInterfaceToken;
 
-/**!
+/**
  *  @ author swp_song
  *
  *  @ brief  swpRequestGetMasterInterfaceToken  ( 取出 TokenTimeStamp )
