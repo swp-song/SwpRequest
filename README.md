@@ -25,9 +25,9 @@
 	* `#import <SwpRequestFramework/SwpRequestFramework.h>`
 
 	* 依赖库   AFNetworking3.0 以上版, 需要手动导入
-	
+
 	-------
-	
+
 * CocoaPods 导入:
 
 	* pod search SwpRequest
@@ -37,7 +37,7 @@
 	* `#import <SwpRequestFramework/SwpRequestFramework.h>`
 
 	* pod 导入会自动添加依赖库, 无需手动导入
-    
+
 
 -------
 
@@ -49,23 +49,15 @@
 
 #### 版本记录
 
-* 版本版本: 2.5.7
+* 版本版本: 2.5.8
 
-* 更新时间: 2017-08-18 17:18:47
+* 更新时间: 2017-08-18 17:26:53
 
 * 更新内容:
-	* 解决 module umbrella 警告问题  < 强迫症患者, 😂😂😂 >
+	* 更新版本号
 
 -------
 
-* 版本版本: 2.5.6
-
-* 更新时间: 2017-08-18 17:01:20
-
-* 更新内容:
-	* 更新加密方式，去除 Base64nl 库 < 不更新了 >
-
--------
 
 #### 备注：
 ```
@@ -79,5 +71,3 @@
 **著作权归 ©swp_song, 如需转载请标明出处**
 
 -------
-
-

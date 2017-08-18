@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
   s.name              = 'SwpRequest'
 
-  s.version           = "2.5.7"
+  s.version           = "2.5.8"
 
   s.summary           = "Swp-Song Request Api."
 
