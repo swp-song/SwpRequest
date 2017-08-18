@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
   s.name              = 'SwpRequest'
 
-  s.version           = "2.5.5"
+  s.version           = "2.5.6"
 
   s.summary           = "Swp-Song Request Api."
 
@@ -36,6 +36,5 @@ Pod::Spec.new do |s|
   s.ios.vendored_framework    = 'SwpRequestFramework/SwpRequestFramework.framework'
 
   s.dependency 'AFNetworking'
-  s.dependency 'Base64nl'
 
 end

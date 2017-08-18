@@ -15,7 +15,7 @@
 NS_ASSUME_NONNULL_BEGIN
 @interface SwpBaseRequest : NSObject <NSCopying, NSMutableCopying>
 
-/**!
+/**
  *  @author swp_song
  *
  *  @brief  shareInstance   ( 单利快速初始 )

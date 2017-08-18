@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Set Pproperty Methods
 
-/**!
+/**
  *  @author swp_song
  *
  *  @brief  swpRequestSetEncryptRange:  ( 设置加密位数, NSRange location 其实位置, length 结束位置 )
@@ -27,14 +27,14 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (SwpRequest *)swpEncryptSetRange:(NSRange)swpEncryptRange;
 
-/**!
+/**
  *  @author swp_song
  *
  *  @brief  swpEncryptSetRange  ( 设置加密位数, NSRange location 其实位置, length 结束位置 )
  */
 + (SwpRequest * _Nonnull (^)(NSRange))swpEncryptSetRange;
 
-/**!
+/**
  *  @author swp_song
  *
  *  @brief  swpEncryptRequestSetAppKey:    ( 设置 appKey, 加密 Key )
@@ -45,7 +45,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (instancetype)swpEncryptRequestSetAppKey:(NSString *)swpEncryptRequestAppKey;
 
-/**!
+/**
  *  @author swp_song
  *
  *  @brief  swpEncryptRequestSetAppKey  ( 设置 appKey, 加密 key )
@@ -53,7 +53,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (SwpRequest * _Nonnull (^)(NSString * _Nonnull))swpEncryptRequestSetAppKey;
 
 
-/**!
+/**
  *  @author swp_song
  *
  *  @brief  swpEncryptRequestGetAppKey  ( 获取 appKey )
@@ -63,7 +63,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)swpEncryptRequestGetAppKey;
 
 
-/**!
+/**
  *  @author swp_song
  *
  *  @brief  swpEncryptResultGetAppKeyValue  ( 获取加密 appKey Value )
@@ -74,7 +74,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 #pragma mark - Network Requests Methods
-/**!
+/**
  *  @author swp_song
  *
  *  @brief  swpPOSTEncrypt:encryptParameters:swpResultSuccess:swpResultError:   ( 设置 appKey, 加密 key )
@@ -92,7 +92,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)swpPOST:(NSString *)URLString encryptParameters:(NSDictionary *)parameters swpResultSuccess:(SwpResultSuccessHandle _Nullable)swpResultSuccess swpResultError:(SwpResultErrorHandle _Nullable)swpResultError;
 
 
-/**!
+/**
  *  @author swp_song
  *
  *  @brief  swpPOSTUploadFile:encryptParameters:fileName:fileData:swpResultSuccess:swpResultError:  ( 请求网络获上传文件, 单文件上传 <POST> )
@@ -114,7 +114,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)swpPOSTUploadFile:(NSString *)URLString encryptParameters:(NSDictionary *)parameters fileName:(NSString *)fileName fileData:(NSData *)fileData swpResultSuccess:(SwpResultSuccessHandle _Nullable)swpResultSuccess swpResultError:(SwpResultErrorHandle _Nullable)swpResultError;
 
 
-/**!
+/**
  *  @author swp_song
  *
  *  @brief  swpPOSTUploadFiles:encryptParameters:fileName:fileDatas:swpResultSuccess:swpResultError:    ( 请求网络获上传文件, 多文件上传, 文件名称相同使用该方法 <POST> )
@@ -136,7 +136,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)swpPOSTUploadFiles:(NSString *)URLString encryptParameters:(NSDictionary *)parameters fileName:(NSString *)fileName fileDatas:(NSArray *)fileDatas swpResultSuccess:(SwpResultSuccessHandle _Nullable)swpResultSuccess swpResultError:(SwpResultErrorHandle _Nullable)swpResultError;
 
 
-/**!
+/**
  *  @author swp_song
  *
  *  @brief  swpPOSTUploadFiles:encryptParameters:fileNames:fileDatas:swpResultSuccess:swpResultError:   ( 请求网络获上传文件, 多文件上传, 文件名称不相同相同使用该方法  <POST> )
