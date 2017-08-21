@@ -1,75 +1,53 @@
 # SwpRequest
 
-
 [![Version](https://img.shields.io/cocoapods/v/SwpRequest.svg?style=flat)](https://img.shields.io/cocoapods/v/SwpRequest.svg?style=flat) [![License](https://img.shields.io/cocoapods/l/SwpRequest.svg?style=flat)](https://img.shields.io/cocoapods/l/SwpRequest.svg?style=flat) [![Platform](https://img.shields.io/cocoapods/p/SwpRequest.svg?style=flat)](https://img.shields.io/cocoapods/p/SwpRequest.svg?style=flat)
 
 -------
 
-#### SwpRequest (简介):
+### SwpRequest
 
-```
-1. 封装 AFNetworking3.0, 使用起来更加方便
-2. 其中封装加密数据传输加密方式.
-```
+> * 封装 AFNetworking3.0, 使用起来更加方便
+> * 其中封装加密数据传输加密方式.
 
 -------
 
-#### 导入：
-
--------
-
+### 导入
 * 手动导入：
-
-	* SwpRequest 文件夹导入项目 中
-
-	* `#import <SwpRequestFramework/SwpRequestFramework.h>`
-
-	* 依赖库   AFNetworking3.0 以上版, 需要手动导入
-
-	-------
+	> * **SwpRequest** 文件夹导入项目中。
+	> * **`#import <SwpRequestFramework/SwpRequestFramework.h>`**
+	> * 依赖库 **AFNetworking3.0** 以上版, 需要手动导入。
 
 * CocoaPods 导入:
-
-	* pod search SwpRequest
-
-	* pod 'SwpRequest'
-
-	* `#import <SwpRequestFramework/SwpRequestFramework.h>`
-
-	* pod 导入会自动添加依赖库, 无需手动导入
-
+    > * **pod search SwpRequest**
+    > * **pod 'SwpRequest'**
+    > * **`#import <SwpRequestFramework/SwpRequestFramework.h>`**
+    > * pod 导入会自动添加依赖库, 无需手动导入
 
 -------
 
-#### AFNetworking 下载地址
+### AFNetworking 下载地址
 
-* [AFNetworking](https://github.com/AFNetworking/AFNetworking)   
+> * [AFNetworking GitHub地址](https://github.com/AFNetworking/AFNetworking)   
 
 -------
 
-#### 版本记录
+### 版本记录
 
-* 版本版本: 2.5.8.1
-
-* 更新时间: 2017-08-18 17:26:53
-
-* 更新内容:
-	* 更新版本号
+> * 版本版本：2.5.9
+> * 更新时间：2017-08-21 11:25:53
+> * 更新内容：
+	* 修复加密解密网络请求，数据解密，解析失败问题
 
 -------
 
 
-#### 备注：
-```
-持续更新, 如果喜欢, 欢迎 Star
-```
+### 备注：
+> * 持续更新, 如果喜欢, 欢迎 Star
 
 -------
 
-#### 声明:
+### 声明:
 
-**著作权归 ©swp_song, 如需转载请标明出处**
+ > * **著作权归 ©swp_song，如需转载请标明出处**
 
 -------
-
-

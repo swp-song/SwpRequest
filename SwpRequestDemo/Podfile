@@ -11,6 +11,6 @@ target 'SwpRequestDemo' do
   # Pods for SwpRequestDemo
   inhibit_all_warnings!
 
-  pod 'SwpRequest'
+  pod 'SwpRequest', :path => '../'
 
 end
