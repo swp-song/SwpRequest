@@ -14,9 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  @author swp_song
  *
- *  @brief  swpRequestUtilsReachabilityStatusChangeBlock:   ( 验证网路环境 )
+ *  @brief  swpRequestUtilsReachabilityStatusChangeBlock:   ( 检测网络变化 )
  *
- *  @param  swpResultStatus swpResultStatus
+ *  @param  swpResultStatus 监测网络变化回调
  */
 + (void)swpRequestUtilsReachabilityStatusChangeBlock:(void(^ _Nullable)(SwpResultReachabilityStatus swpResultStatus))swpResultStatus;
 

@@ -14,13 +14,15 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  @author swp_song
  *
- *  @brief  swpEncryptToolsResultDecrypt:   ( 返回数据解密处理 )
+ *  @brief  swpEncryptToolsResultDecrypt:isLog: ( 返回数据解密 )
  *
- *  @param  responseObject  responseObject
+ *  @param  responseObject  解密数据源
+ *
+ *  @param  isLog           是否打印
  *
  *  @return NSDictionary
  */
-+ (NSDictionary *)swpEncryptToolsResultDecrypt:(id)responseObject;
++ (NSDictionary *)swpEncryptToolsResultDecrypt:(id)responseObject isLog:(BOOL)isLog;
 
 /**
  *  @author swp_song

@@ -11,31 +11,30 @@
 NS_ASSUME_NONNULL_BEGIN
 @interface SwpNetworkModelTools : NSObject
 
-/**!
- *  @author swp_song
+/**
+ *  @return swp_song
  *
- *  @brief  swpNetworkModelToolsGetDomainName:setMainInterface:  ( 取出 设置的 域名 )
+ *  @brief  swpNetworkModelToolsDomainNameHandling:setMainInterface:    ( 域名处理 )
  *
- *  @param  domainName          domainName
+ *  @param  domainName      域名
  *
- *  @param  mainInterfaceURL    mainInterfaceURL
- *
- *  @return NSString
- */
-+ (NSString *)swpNetworkModelToolsGetDomainName:(NSString *)domainName setMainInterface:(NSString *)mainInterfaceURL;
-
-/**!
- *  @author swp_song
- *
- *  @brief  swpNetworkModelToolsGetMainInterfaceURL:setMainInterface:  ( 取出 设置 主接口 名称 )
- *
- *  @param  domainName          domainName
- *
- *  @param  mainInterfaceURL    mainInterfaceURL
+ *  @param  mainInterface   主接口
  *
  *  @return NSString
  */
-+ (NSString *)swpNetworkModelToolsGetMainInterfaceURL:(NSString *)domainName setMainInterface:(NSString *)mainInterfaceURL;
++ (NSString *)swpNetworkModelToolsDomainNameHandling:(NSString *)domainName mainInterface:(NSString *)mainInterface;
 
+/**
+ *  @return swp_song
+ *
+ *  @brief  swpNetworkModelToolsMainInterfaceHandling:mainInterface:    ( 主接口数据处理 )
+ *
+ *  @param  domainName      域名
+ *
+ *  @param  mainInterface   主接口
+ *
+ *  @return NSString
+ */
++ (NSString *)swpNetworkModelToolsMainInterfaceHandling:(NSString *)domainName mainInterface:(NSString *)mainInterface;
 @end
 NS_ASSUME_NONNULL_END

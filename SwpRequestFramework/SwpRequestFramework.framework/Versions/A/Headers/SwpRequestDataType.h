@@ -32,8 +32,8 @@ typedef NS_ENUM(NSInteger, SwpResultReachabilityStatus) {
  - SwpResultUploadFileStatus:       ( 文件上传状态 )
  - SwpResultDoNotFileUpload:        ( 不上传任何文件 )
  - SwpResultSingleFileUpload:       ( 单文件上传 )
- - SwpResultMultipleFilesUpload:    ( 多文件上传 < 文件名相同 > )
- - SwpResultMultiplePicturesUpload: ( 多文件上传 < 文件名不同 > )
+ - SwpResultMultipleFilesUpload:    ( 多文件上传，文件名相同  )
+ - SwpResultMultiplePicturesUpload: ( 多文件上传，文件名不同  )
  */
 typedef NS_ENUM(NSInteger, SwpResultUploadFileStatus) {
     SwpResultDoNotFileUpload    = 0,
@@ -45,7 +45,7 @@ typedef NS_ENUM(NSInteger, SwpResultUploadFileStatus) {
 
 /**
  - SwpRequestMasterInterfaceAppVersionStatus        ( 获取 App 版本状态  )
- - SwpRequestMasterInterfaceDefaultAppVersion:      ( 默认 获取 自动 识别 Production | Development App 版本)
+ - SwpRequestMasterInterfaceDefaultAppVersion:      ( 默认获取自动识别 Production | Development App 版本)
  - SwpRequestMasterInterfaceProductionAppVersion:   ( 获取 Production  App 版本 )
  - SwpRequestMasterInterfaceDevelopmentAppVersion:  ( 获取 Development App 版本 )
  */
@@ -66,9 +66,9 @@ typedef void(^SwpRequestMasterInterfaceResultError)(NSInteger errorCode, NSStrin
 
 /** SwpDownloadProgress 下载进度 结构体 */
 struct SwpDownloadProgress {
-    double      swpFractionCompleted;
-    swp_int64_t swpTotalUnitCount;
-    swp_int64_t swpCompletedUnitCount;
+    double      swpFractionCompleted;       //  下载进度百分比
+    swp_int64_t swpTotalUnitCount;          //  下载文件总数
+    swp_int64_t swpCompletedUnitCount;      //  下载完成数
 };
 typedef struct SwpDownloadProgress SwpDownloadProgress;
 
@@ -77,11 +77,11 @@ typedef struct SwpDownloadProgress SwpDownloadProgress;
  *
  *  @brief  SwpDownloadProgressMake ( 快速初始化 )
  *
- *  @param  swpFractionCompleted    swpFractionCompleted
+ *  @param  swpFractionCompleted    下载进度百分比
  *
- *  @param  swpTotalUnitCount       swpTotalUnitCount
+ *  @param  swpTotalUnitCount       下载文件总数
  *
- *  @param  swpCompletedUnitCount   swpCompletedUnitCount
+ *  @param  swpCompletedUnitCount   下载完成数
  *
  *  @return SwpDownloadProgress
  */

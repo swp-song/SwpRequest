@@ -16,96 +16,96 @@ FOUNDATION_EXPORT NSString * const kSwpRequestCachedDataKey;
 
 
 /**
- *  @ author swp_song
+ *  @author swp_song
  *
- *  @ brief  swpRequestGetSystemMessageDictionary:  ( 获取 系统 信息 )
+ *  @brief  swpRequestGetSystemMessage  ( 获取系统信息 )
  *
- *  @ return NSDictionary
+ *  @return NSDictionary
  */
-+ (NSDictionary *)swpRequestGetSystemMessageDictionary;
++ (NSDictionary *)swpRequestGetSystemMessage;
 
 /**
- *  @ author swp_song
+ *  @author swp_song
  *
- *  @ brief  swpRequestSetNetworkEnvironment:setMainInterface: ( 设置 网络环境 )
+ *  @brief  swpRequestSetNetworkEnvironment:setMainInterface:   ( 设置网络环境 )
  *
- *  @ param  domainName
+ *  @param  domainName      域名
  *
- *  @ param  mainInterfaceURL
+ *  @param  mainInterface   主接口
  */
-+ (void)swpRequestSetNetworkEnvironment:(NSString *)domainName setMainInterface:(NSString *)mainInterfaceURL;
++ (void)swpRequestSetNetworkEnvironment:(NSString *)domainName setMainInterface:(NSString *)mainInterface;
 
 /**
- *  @ author swp_song
+ *  @author swp_song
  *
- *  @ brief  swpRequestGetMasterInterfaceData:resultSuccess:resultError: ( 获取出接口数据 )
+ *  @brief  swpRequestGetMasterInterfaceData:resultSuccess:resultError: ( 发起请求，获接主接口数据 )
  *
- *  @ param  parameters
+ *  @param  parameters      请求传递的参数
  *
- *  @ param  resultSuccess
+ *  @param  resultSuccess   请求成功的回调
  *
- *  @ param  resultError
+ *  @param  resultError     请求失败的回调
  */
-+ (void)swpRequestGetMasterInterfaceData:(nullable NSDictionary *)parameters resultSuccess:(nullable void(^)(NSDictionary *resultObject))resultSuccess resultError:(nullable void(^)(NSInteger error, NSString *errorMessage))resultError;
++ (void)swpRequestGetMasterInterfaceData:(NSDictionary * _Nullable)parameters resultSuccess:(void(^ _Nullable)(NSDictionary *resultObject))resultSuccess resultError:(void(^ _Nullable)(NSInteger error, NSString *errorMessage))resultError;
 
 #pragma mark - MainInterface Get Data 
 
 /**
- *  @ author swp_song
+ *  @author swp_song
  *
- *  @ brief  swpRequestGetMasterInterfaceCachedData    ( 取出 缓存 数据 )
+ *  @brief  swpRequestGetMasterInterfaceCachedEntireData    ( 取出缓存全部数据 )
  *
- *  @ return id
+ *  @return id
  */
-+ (id)swpRequestGetMasterInterfaceCachedData;
++ (id)swpRequestGetMasterInterfaceCachedEntireData;
 
 /**
- *  @ author swp_song
+ *  @author swp_song
  *
- *  @ brief  swpRequestGetMasterInterfaceCachedDataWith:    ( 取出 根据 key 取出缓存中的数据  )
+ *  @brief  swpRequestGetMasterInterfaceCachedData: ( 取出根据 Key 取出缓存中的数据 )
  *
- *  @ param  key
+ *  @param  key key
  *
- *  @ return id
+ *  @return id
  */
-+ (id)swpRequestGetMasterInterfaceCachedDataWith:(NSString *)key;
++ (id)swpRequestGetMasterInterfaceCachedData:(NSString *)key;
 
 
 /**
- *  @ author swp_song
+ *  @author swp_song
  *
- *  @ brief  swpRequestGetMasterInterfaceCachedDataWith:    ( 取出 根据 key 取出缓存中的数据  )
+ *  @brief  swpRequestGetMasterInterfaceApi ( 取出主接 Api 中缓存数据 )
  *
- *  @ return NSDictionary
+ *  @return NSDictionary
  */
-+ (NSDictionary *)swpRequestGetMasterInterfaceUrls;
++ (NSDictionary *)swpRequestGetMasterInterfaceApi;
 
 /**
- *  @ author swp_song
+ *  @author swp_song
  *
- *  @ brief  swpRequestGetMasterInterfaceUrl:   ( 取出 根据 key 取出缓存中的数据  )
+ *  @brief  swpRequestGetInterface  ( 根据 Key 取出接口数据 )
  *
- *  @ param  key
+ *  @param  key key
  *
- *  @ return NSString
+ *  @return NSString
  */
-+ (NSString *)swpRequestGetMasterInterfaceUrl:(NSString *)key;
++ (NSString *)swpRequestGetInterface:(NSString *)key;
 
 /**
- *  @ author swp_song
+ *  @author swp_song
  *
- *  @ brief  swpRequestGetMasterInterfaceToken  ( 取出 token )
+ *  @brief  swpRequestGetMasterInterfaceToken   ( 取出 Token )
  *
- *  @ return NSString
+ *  @return NSString
  */
 + (NSString *)swpRequestGetMasterInterfaceToken;
 
 /**
- *  @ author swp_song
+ *  @author swp_song
  *
- *  @ brief  swpRequestGetMasterInterfaceToken  ( 取出 TokenTimeStamp )
+ *  @brief  swpRequestGetMasterInterfaceTokenTimeStamp  ( 取出 TimeStamp )
  *
- *  @ return NSString
+ *  @return NSString
  */
 + (NSString *)swpRequestGetMasterInterfaceTokenTimeStamp;
 

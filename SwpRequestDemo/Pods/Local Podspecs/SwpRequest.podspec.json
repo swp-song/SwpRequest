@@ -1,6 +1,6 @@
 {
   "name": "SwpRequest",
-  "version": "2.5.9",
+  "version": "2.6.6",
   "summary": "Swp-Song Request Api.",
   "description": "TODO: Swp-Song Request Api.",
   "homepage": "https://github.com/swp-song/SwpRequest",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/swp-song/SwpRequest.git",
-    "tag": "2.5.9"
+    "tag": "2.6.6"
   },
   "requires_arc": true,
   "frameworks": [

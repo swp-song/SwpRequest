@@ -1,0 +1,1 @@
+../../../../../../SwpRequestFramework/SwpRequestFramework.framework/Versions/A/Headers/SwpRequestDataType.h

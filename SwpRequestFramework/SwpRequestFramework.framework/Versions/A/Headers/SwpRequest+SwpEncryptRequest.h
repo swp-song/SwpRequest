@@ -13,7 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SwpRequest (SwpEncryptRequest)
 
-
 #pragma mark - Set Pproperty Methods
 
 /**
@@ -21,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @brief  swpRequestSetEncryptRange:  ( 设置加密位数, NSRange location 其实位置, length 结束位置 )
  *
- *  @param  swpEncryptRange swpEncryptRange
+ *  @param  swpEncryptRange     加密位数
  *
  *  @return SwpRequest
  */
@@ -37,9 +36,9 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  @author swp_song
  *
- *  @brief  swpEncryptRequestSetAppKey:    ( 设置 appKey, 加密 Key )
+ *  @brief  swpEncryptRequestSetAppKey: ( 设置 AppKey, 加密 Key 的值 )
  *
- *  @param  swpEncryptRequestAppKey swpEncryptRequestAppKey
+ *  @param  swpEncryptRequestAppKey 加密 AppKey，key 的值
  *
  *  @return SwpRequest
  */
@@ -48,7 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  @author swp_song
  *
- *  @brief  swpEncryptRequestSetAppKey  ( 设置 appKey, 加密 key )
+ *  @brief  swpEncryptRequestSetAppKey  ( 设置 AppKey, 加密 Key 的值 )
  */
 + (SwpRequest * _Nonnull (^)(NSString * _Nonnull))swpEncryptRequestSetAppKey;
 
@@ -56,17 +55,16 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  @author swp_song
  *
- *  @brief  swpEncryptRequestGetAppKey  ( 获取 appKey )
+ *  @brief  swpEncryptRequestGetAppKey  ( 获取 AppKey，Key )
  *
  *  @return NSString
  */
 + (NSString *)swpEncryptRequestGetAppKey;
 
-
 /**
  *  @author swp_song
  *
- *  @brief  swpEncryptResultGetAppKeyValue  ( 获取加密 appKey Value )
+ *  @brief  swpEncryptResultGetAppKeyValue  ( 获取加密 AppKey Value )
  *
  *  @return NSString
  */
@@ -77,37 +75,36 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  @author swp_song
  *
- *  @brief  swpPOSTEncrypt:encryptParameters:swpResultSuccess:swpResultError:   ( 设置 appKey, 加密 key )
+ *  @brief  swpPOSTEncrypt:encryptParameters:swpResultSuccess:swpResultError:   ( 传递参数加密，发起网络请求 )
  *
- *  @param  URLString           URLString
+ *  @param  URLString           请求 URL
  *
- *  @param  parameters          parameters
+ *  @param  parameters          请求传递的参数
  *
- *  @param  swpResultSuccess    swpResultSuccess
+ *  @param  swpResultSuccess    请求成功的回调
  *
- *  @param  swpResultError      swpResultError
+ *  @param  swpResultError      请求失败的回调
  *
  *  @return SwpRequest
  */
 + (instancetype)swpPOST:(NSString *)URLString encryptParameters:(NSDictionary *)parameters swpResultSuccess:(SwpResultSuccessHandle _Nullable)swpResultSuccess swpResultError:(SwpResultErrorHandle _Nullable)swpResultError;
 
-
 /**
  *  @author swp_song
  *
- *  @brief  swpPOSTUploadFile:encryptParameters:fileName:fileData:swpResultSuccess:swpResultError:  ( 请求网络获上传文件, 单文件上传 <POST> )
+ *  @brief  swpPOSTUploadFile:encryptParameters:fileName:fileData:swpResultSuccess:swpResultError:  ( 传递参数加密，发起网络请求，单文件上传 )
  *
- *  @param  URLString           URLString
+ *  @param  URLString           请求 URL
  *
- *  @param  parameters          parameters
+ *  @param  parameters          请求传递的参数
  *
- *  @param  fileName            fileName
+ *  @param  fileName            请求上传文件名称
  *
- *  @param  fileData            fileData
+ *  @param  fileData            请求上传文件数据流
  *
- *  @param  swpResultSuccess    swpResultSuccess
+ *  @param  swpResultSuccess    请求成功的回调
  *
- *  @param  swpResultError      swpResultError
+ *  @param  swpResultError      请求失败的回调
  *
  *  @return SwpRequest
  */
@@ -117,45 +114,45 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  @author swp_song
  *
- *  @brief  swpPOSTUploadFiles:encryptParameters:fileName:fileDatas:swpResultSuccess:swpResultError:    ( 请求网络获上传文件, 多文件上传, 文件名称相同使用该方法 <POST> )
+ *  @brief  swpPOSTUploadFiles:encryptParameters:fileName:fileDatas:swpResultSuccess:swpResultError:    ( 传递参数加密，发起网络请求，文件名称相同使用该方法 )
  *
- *  @param  URLString           URLString
+ *  @param  URLString           请求 URL
  *
- *  @param  parameters          parameters
+ *  @param  parameters          请求传递的参数
  *
- *  @param  fileName            fileName
+ *  @param  fileName            请求上传文件名称
  *
- *  @param  fileDatas           fileDatas
+ *  @param  fileDatas           请求上传一组文件数据流
  *
- *  @param  swpResultSuccess    swpResultSuccess
+ *  @param  swpResultSuccess    请求成功的回调
  *
- *  @param  swpResultError      swpResultError
+ *  @param  swpResultError      请求失败的回调
  *
  *  @return SwpRequest
  */
-+ (instancetype)swpPOSTUploadFiles:(NSString *)URLString encryptParameters:(NSDictionary *)parameters fileName:(NSString *)fileName fileDatas:(NSArray *)fileDatas swpResultSuccess:(SwpResultSuccessHandle _Nullable)swpResultSuccess swpResultError:(SwpResultErrorHandle _Nullable)swpResultError;
++ (instancetype)swpPOSTUploadFiles:(NSString *)URLString encryptParameters:(NSDictionary *)parameters fileName:(NSString *)fileName fileDatas:(NSArray<NSData *> *)fileDatas swpResultSuccess:(SwpResultSuccessHandle _Nullable)swpResultSuccess swpResultError:(SwpResultErrorHandle _Nullable)swpResultError;
 
 
 /**
  *  @author swp_song
  *
- *  @brief  swpPOSTUploadFiles:encryptParameters:fileNames:fileDatas:swpResultSuccess:swpResultError:   ( 请求网络获上传文件, 多文件上传, 文件名称不相同相同使用该方法  <POST> )
+ *  @brief  swpPOSTUploadFiles:encryptParameters:fileNames:fileDatas:swpResultSuccess:swpResultError:   ( 传递参数加密，发起网络请求，文件名称不相同，使用该方法 )
  *
- *  @param  URLString           URLString
+ *  @param  URLString           请求 URL
  *
- *  @param  parameters          parameters
+ *  @param  parameters          请求传递的参数
  *
- *  @param  fileNames           fileNames
+ *  @param  fileNames           请求上传一组文件名称
  *
- *  @param  fileDatas           fileDatas
+ *  @param  fileDatas           请求上传一组文件数据流
  *
- *  @param  swpResultSuccess    swpResultSuccess
+ *  @param  swpResultSuccess    请求成功的回调
  *
- *  @param  swpResultError      swpResultError
+ *  @param  swpResultError      请求失败的回调
  *
  *  @return SwpRequest
  */
-+ (instancetype)swpPOSTUploadFiles:(NSString *)URLString encryptParameters:(NSDictionary *)parameters fileNames:(NSArray *)fileNames fileDatas:(NSArray *)fileDatas swpResultSuccess:(SwpResultSuccessHandle _Nullable)swpResultSuccess swpResultError:(SwpResultErrorHandle _Nullable)swpResultError;
++ (instancetype)swpPOSTUploadFiles:(NSString *)URLString encryptParameters:(NSDictionary *)parameters fileNames:(NSArray<NSString *> *)fileNames fileDatas:(NSArray<NSData *> *)fileDatas swpResultSuccess:(SwpResultSuccessHandle _Nullable)swpResultSuccess swpResultError:(SwpResultErrorHandle _Nullable)swpResultError;
 
 @end
 NS_ASSUME_NONNULL_END

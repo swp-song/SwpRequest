@@ -14,13 +14,13 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  @author swp_song
  *
- *  @brief  swpDownloadFile:swpDownloadProgress:swpCompletionHandler:   ( 请求网络 < 下载文件方法 > )
+ *  @brief  swpDownloadFile:swpDownloadProgress:swpCompletionHandler:   ( 单位件下载 )
  *
- *  @param  URLString                       请求的 url
+ *  @param  URLString               请求 URL
  *
- *  @param  swpDownloadProgress             下载进度
+ *  @param  swpDownloadProgress     下载进度
  *
- *  @param  swpCompletionHandler            下载回调    ( 成功 | 失败 回调, 成功 Error 为 nil )
+ *  @param  swpCompletionHandler    下载回调    ( 成功 | 失败 回调, 成功 Error 为 nil )
  */
 + (void)swpDownloadFile:(NSString *)URLString swpDownloadProgress:(void(^ _Nullable)(SwpDownloadProgress swpDownloadProgress))swpDownloadProgress swpCompletionHandler:(void(^ _Nullable)(NSString *filePath, NSString *fileName, NSString *error))swpCompletionHandler;
 

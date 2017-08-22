@@ -14,55 +14,57 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  @author swp_song
  *
- *  @brief  swpRequestToolsSetNetworkActivityIndicatorVisible:  ( 显示或隐藏 网络获取数据时 UINavigationBar 上的图标 <转圈的菊花 > )
+ *  @brief  swpRequestToolsSetNetworkActivityIndicatorVisible:  ( 显示或隐藏，网络获取数据时 UINavigationBar 上的图标 < 转圈的菊花 > )
  *
- *  @param  networkActivityIndicatorVisible networkActivityIndicatorVisible
+ *  @param  networkActivityIndicatorVisible YES > 显示，NO > 隐藏
  */
 + (void)swpRequestToolsSetNetworkActivityIndicatorVisible:(BOOL)networkActivityIndicatorVisible;
 
 /**
  *  @author swp_song
  *
- *  @brief  swpRequestToolsGetErrorMessage: ( 获取 错误信息 )
+ *  @brief  swpRequestToolsGetErrorMessage: ( 获取错误信息 )
  *
- *  @param  error       error
+ *  @param  error   error
  *
  *  @return NSString
  */
-+ (NSString *)swpRequestToolsGetErrorMessage:(nullable NSError *)error;
++ (NSString *)swpRequestToolsGetErrorMessage:(NSError * _Nullable)error;
+
 
 /**
  *  @author swp_song
  *
- *  @brief  swpRequestToolsGetDownloadFileName:  ( 取出 下载 文件名称 )
+ *  @brief  swpRequestToolsGetDownloadFilePath: ( 获取文件下载路径 )
  *
- *  @param  filePath    filePath
+ *  @param  filePath    文件存放 URL
+ *
+ *  @return NSString
+ */
++ (NSString *)swpRequestToolsGetDownloadFilePath:(NSURL *)filePath;
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpRequestToolsGetDownloadFileName:  ( 获取下载文件名称 )
+ *
+ *  @param  filePath    文件存放 URL
  *
  *  @return NSString
  */
 + (NSString *)swpRequestToolsGetDownloadFileName:(NSURL *)filePath;
 
-/**
- *  @author swp_song
- *
- *  @brief  swpRequestToolsDownloadFilePathDispose:  ( 下载 文件 路径处理 )
- *
- *  @param  filePath    filePath
- *
- *  @return NSString
- */
-+ (NSString *)swpRequestToolsDownloadFilePathDispose:(NSURL *)filePath;
 
 /**
  *  @author swp_song
  *
- *  @brief  swpRequestToolsMasterInterfaceParametersHandling:setAppKey:setAppKeyValue: ( 设置 主接口 提交数据 app_key )
+ *  @brief  swpRequestToolsMasterInterfaceParametersHandling:setAppKey:setAppKeyValue: ( 设置主接口提交数据 App_key 的 Key 和 Value )
  *
- *  @param  parameters      parameters
+ *  @param  parameters      提交数据参数
  *
- *  @param  appKey          appKey
+ *  @param  appKey          Key
  *
- *  @param  appKeyValue     appKeyValue
+ *  @param  appKeyValue     value
  *
  *  @return NSDictionary
  */
@@ -73,18 +75,18 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @brief  swpRequestToolsUserDefaultSetObject:forKey: ( 存储 UserDefault )
  *
- *  @param  object  object
+ *  @param  value   value
  *
  *  @param  key     key
  *
  *  @return BOOL
  */
-+ (BOOL)swpRequestToolsUserDefaultSetObject:(id)object forKey:(NSString *)key;
++ (BOOL)swpRequestToolsUserDefaultSetObject:(id)value forKey:(NSString *)key;
 
 /**
  *  @author swp_song
  *
- *  @brief  swpRequestToolsUserDefaultGetObject:    ( 取出 NSUserDefaults 存储的数据 )
+ *  @brief  swpRequestToolsUserDefaultGetObject:    ( 获取 NSUserDefaults 存储的数据 )
  *
  *  @param  key key
  *
@@ -95,7 +97,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  @author swp_song
  *
- *  @brief  swpRequestToolsGetAppVersion   ( 获取 系统 版本号 < 无需自己判断 > )
+ *  @brief  swpRequestToolsGetAppVersion   ( 获取系统版本号，默认判断开发模式，生产模式 )
  *
  *  @return NSString
  */
@@ -104,34 +106,44 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  @author swp_song
  *
- *  @brief  swpRequestToolsBundleVersion   ( 获取 系统 版本号 Production )
+ *  @brief  swpRequestToolsGetProductionVersion ( 获取系统版生产模式的本号 )
  *
  *  @return NSString
  */
-+ (NSString *)swpRequestToolsBundleVersion;
++ (NSString *)swpRequestToolsGetProductionVersion;
 
 /**
  *  @author swp_song
  *
- *  @brief  swpRequestToolsBundleVersion   ( 获取 系统 版本号 Development )
+ *  @brief  swpRequestToolsDevelopmentVersion   ( 获取系统版开发模式的本号 )
  *
  *  @return NSString
  */
-+ (NSString *)swpRequestToolsBundleShortVersionString;
++ (NSString *)swpRequestToolsDevelopmentVersion;
 
 /**
  *  @author swp_song
  *
- *  @brief  swpRequestToolsGetSwpRequestVersion ( 获取 SwpRequest 版本号 )
+ *  @brief  swpRequestToolsGetSwpRequestInfo    ( 获取 SwpRequest 相关信息 )
  *
- *   @return NSString
+ *  @return NSString
+ */
++ (NSDictionary<NSString *, NSString *> *)swpRequestToolsGetSwpRequestInfo;
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpRequestToolsGetSwpRequestVersion ( 获取 SwpRequest 的版本号 )
+ *
+ *  @return NSString
  */
 + (NSString *)swpRequestToolsGetSwpRequestVersion;
 
+
 /**
  *  @author swp_song
  *
- *  @brief  swpRequestToolsBundleVersion   ( 获取 系统 版本号 Development )
+ *  @brief  swpRequestToolsCheckStringMessage   ( 验证字符串，为 null 返回 "" )
  *
  *  @param  string  string
  *
@@ -142,42 +154,43 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  @author swp_song
  *
- *  @brief  swpRequestToolsGetIphoneIpAddress ( 获取 当前 设备的 Ip 地址 )
+ *  @brief  swpRequestToolsGetDeviceIpAddress   ( 获取当前设备的 Ip 地址 )
  *
  *  @return NSString
  */
-+ (NSString *)swpRequestToolsGetIphoneIpAddress;
++ (NSString *)swpRequestToolsGetDeviceIpAddress;
 
 /**
  *  @author swp_song
  *
- *  @brief  swpRequestToolsDeviceDeviceType: ( 获取 设备 类型 )
+ *  @brief  swpRequestToolsDeviceType   ( 获取设备型号 )
  *
  *  @return NSString
  */
-+ (NSString *)swpRequestToolsDeviceDeviceType;
++ (NSString *)swpRequestToolsDeviceType;
 
 
 /**
  *  @author swp_song
  *
- *  @brief  swpRequestToolsGetSystemMessageDictionary:  ( 获取 系统 信息 )
+ *  @brief  swpRequestToolsGetSystemMessage ( 获取系统信息 )
  *
  *  @return NSDictionary
  */
-+ (NSDictionary *)swpRequestToolsGetSystemMessageDictionary;
-
++ (NSDictionary *)swpRequestToolsGetSystemMessage;
 
 /**
  *  @author swp_song
  *
- *  @brief  swpRequestToolsResultDecrypt:   ( 返回数据处理 )
+ *  @brief  swpRequestToolsResultDataAnalysis:isLog:    ( 返回数据解析 )
  *
- *  @param  responseObject  responseObject
+ *  @param  responseObject  解析数据源
+ *
+ *  @param  isLog           是否打印
  *
  *  @return NSDictionary
  */
-+ (NSDictionary *)swpRequestToolsResultDecrypt:(id)responseObject;
++ (NSDictionary *)swpRequestToolsResultDataAnalysis:(id)responseObject isLog:(BOOL)isLog;
 
 
 @end
