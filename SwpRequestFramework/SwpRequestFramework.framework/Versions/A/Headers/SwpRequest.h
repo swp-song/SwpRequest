@@ -14,6 +14,27 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  @author swp_song
  *
+ *  @brief  swpRequestInit  ( 单利 )
+ */
++ (__kindof SwpRequest * _Nonnull (^)())swpRequestInit;
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpRequestLogInformationChain   ( 打印 SwpRequest 详细信息 )
+ */
+- (__kindof SwpRequest * _Nonnull (^)())swpRequestLogInformationChain;
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpRequestSetDebugEnabled   ( 是否开启 Debug 模式，默认开启 )
+ */
+- (__kindof SwpRequest * _Nonnull (^)(BOOL))swpRequestSetDebugEnabledChain;
+
+/**
+ *  @author swp_song
+ *
  *  @brief  swpPOST:parameters:uploadFileStatus:fileNames:fileDatas:swpResultSuccess:swpResultError:    ( 发起网络请求，核心方法 )
  *
  *  @param  URLString           请求 URL

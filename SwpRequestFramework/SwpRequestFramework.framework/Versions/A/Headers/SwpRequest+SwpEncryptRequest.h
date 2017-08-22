@@ -24,14 +24,14 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @return SwpRequest
  */
-+ (SwpRequest *)swpEncryptSetRange:(NSRange)swpEncryptRange;
+- (instancetype)swpEncryptSetRange:(NSRange)swpEncryptRange;
 
 /**
  *  @author swp_song
  *
- *  @brief  swpEncryptSetRange  ( 设置加密位数, NSRange location 其实位置, length 结束位置 )
+ *  @brief  swpEncryptSetRangeChain ( 设置加密位数, NSRange location 其实位置, length 结束位置 )
  */
-+ (SwpRequest * _Nonnull (^)(NSRange))swpEncryptSetRange;
+- (SwpRequest * _Nonnull (^)(NSRange))swpEncryptSetRangeChain;
 
 /**
  *  @author swp_song
@@ -42,14 +42,14 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @return SwpRequest
  */
-+ (instancetype)swpEncryptRequestSetAppKey:(NSString *)swpEncryptRequestAppKey;
+- (instancetype)swpEncryptRequestSetAppKey:(NSString *)swpEncryptRequestAppKey;
 
 /**
  *  @author swp_song
  *
- *  @brief  swpEncryptRequestSetAppKey  ( 设置 AppKey, 加密 Key 的值 )
+ *  @brief  swpEncryptRequestSetAppKeyChain ( 设置 AppKey, 加密 Key 的值 )
  */
-+ (SwpRequest * _Nonnull (^)(NSString * _Nonnull))swpEncryptRequestSetAppKey;
+- (SwpRequest * _Nonnull (^)(NSString * _Nonnull))swpEncryptRequestSetAppKeyChain;
 
 
 /**

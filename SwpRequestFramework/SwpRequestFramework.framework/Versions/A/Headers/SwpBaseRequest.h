@@ -35,26 +35,11 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  @author swp_song
  *
- *  @brief  shareInstanceChain  ( 单利 )
- */
-+ (__kindof SwpBaseRequest * _Nonnull (^)())shareInstanceChain;
-
-
-/**
- *  @author swp_song
- *
  *  @brief  swpRequestLogInformation    ( 打印 SwpRequest 详细信息 )
  *
  *  @return id
  */
-+ (instancetype)swpRequestLogInformation;
-
-/**
- *  @author swp_song
- *
- *  @brief  swpRequestLogInformationChain   ( 打印 SwpRequest 详细信息 )
- */
-+ (__kindof SwpBaseRequest * _Nonnull (^)())swpRequestLogInformationChain;
+- (instancetype)swpRequestLogInformation;
 
 /**
  *  @author swp_song
@@ -66,14 +51,6 @@ NS_ASSUME_NONNULL_BEGIN
  *  @return id
  */
 - (instancetype)swpRequestSetDebugEnabled:(BOOL)debugEnabled;
-
-/**
- *  @author swp_song
- *
- *  @brief  swpRequestSetDebugEnabled   ( 是否开启 Debug 模式，默认开启 )
- */
-- (__kindof SwpBaseRequest * _Nonnull (^)(BOOL))swpRequestSetDebugEnabledChain;
-
 
 
 @end

@@ -21,7 +21,10 @@ static NSString * const urlString1 = @"https://www.baidu.com";
 @implementation ViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
+    
+    // Do any additional setup after loading the view, typically from a nib.
     
     SwpRequest *swpRequest01 = [SwpRequest shareInstance];
     SwpRequest *swpRequest02 = [SwpRequest shareInstance];
@@ -35,8 +38,7 @@ static NSString * const urlString1 = @"https://www.baidu.com";
     SwpRequest *swpRequest10 = [swpRequest04 mutableCopy];
     
     NSLog(@"swpRequest01 = %p, swpRequest02 = %p, swpRequest03 = %p, swpRequest04 = %p, swpRequest05 = %p, swpRequest06 = %p, swpRequest07 = %p, swpRequest08 = %p, swpRequest09 = %p, swpRequest10 = %p, ",  swpRequest01, swpRequest02, swpRequest03, swpRequest04, swpRequest05, swpRequest06, swpRequest07 , swpRequest08, swpRequest09, swpRequest10);
-    
-    // Do any additional setup after loading the view, typically from a nib.
+
     
     [self swpRequestGetData:urlString1];
 }
@@ -49,9 +51,10 @@ static NSString * const urlString1 = @"https://www.baidu.com";
 
 - (void)swpRequestGetData:(NSString *)urlString  {
     
-    SwpRequest.shareInstanceChain().swpRequestSetDebugEnabledChain(NO);
-    SwpRequest.swpRequestLogInformationChain();
-    NSLog(@"%@", SwpRequest.shareInstanceChain().swpRequestVersion);
+    
+    SwpRequest.swpRequestInit()
+    .swpRequestLogInformationChain()
+    .swpRequestSetDebugEnabledChain(YES);
     
     [SwpRequest swpPOST:urlString parameters:@{} swpResultSuccess:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull resultObject) {
         

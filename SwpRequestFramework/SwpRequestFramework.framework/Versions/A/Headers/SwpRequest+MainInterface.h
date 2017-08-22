@@ -18,22 +18,32 @@ FOUNDATION_EXPORT NSString * const kSwpRequestCachedDataKey;
 /**
  *  @author swp_song
  *
- *  @brief  swpRequestGetSystemMessage  ( 获取系统信息 )
- *
- *  @return NSDictionary
- */
-+ (NSDictionary *)swpRequestGetSystemMessage;
-
-/**
- *  @author swp_song
- *
  *  @brief  swpRequestSetNetworkEnvironment:setMainInterface:   ( 设置网络环境 )
  *
  *  @param  domainName      域名
  *
  *  @param  mainInterface   主接口
+ *
+ *  @return SwpRequest
  */
-+ (void)swpRequestSetNetworkEnvironment:(NSString *)domainName setMainInterface:(NSString *)mainInterface;
+- (instancetype)swpRequestSetNetworkEnvironment:(NSString *)domainName setMainInterface:(NSString *)mainInterface;
+
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpRequestSetNetworkEnvironmentChain    ( 设置网络环境 )
+ */
+- (SwpRequest * _Nonnull (^)(NSString * _Nonnull, NSString * _Nonnull))swpRequestSetNetworkEnvironmentChain;
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpRequestGetSystemMessage  ( 获取系统信息 )
+ *
+ *  @return NSDictionary
+ */
++ (NSDictionary *)swpRequestGetSystemMessage;
 
 /**
  *  @author swp_song
@@ -45,8 +55,10 @@ FOUNDATION_EXPORT NSString * const kSwpRequestCachedDataKey;
  *  @param  resultSuccess   请求成功的回调
  *
  *  @param  resultError     请求失败的回调
+ *
+ *  @return SwpRequest
  */
-+ (void)swpRequestGetMasterInterfaceData:(NSDictionary * _Nullable)parameters resultSuccess:(void(^ _Nullable)(NSDictionary *resultObject))resultSuccess resultError:(void(^ _Nullable)(NSInteger error, NSString *errorMessage))resultError;
++ (instancetype)swpRequestGetMasterInterfaceData:(NSDictionary * _Nullable)parameters resultSuccess:(void(^ _Nullable)(NSDictionary *resultObject))resultSuccess resultError:(void(^ _Nullable)(NSInteger error, NSString *errorMessage))resultError;
 
 #pragma mark - MainInterface Get Data 
 

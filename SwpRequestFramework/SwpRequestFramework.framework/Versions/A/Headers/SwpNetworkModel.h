@@ -49,6 +49,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy  ) NSString  *swpNetworkDataNULL;
 /** 获取接口数据时, 用户登录状态   */
 @property (nonatomic, assign, getter = isSwpNetworkUserLonginState) BOOL swpNetworkUserLonginState;
+/** 网络是否存在   */
+@property (nonatomic, assign, getter = isSwpNetworkExists) BOOL swpNetworkExists;
 
 /**
  *  @author swp_song
