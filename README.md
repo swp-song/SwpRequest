@@ -25,6 +25,8 @@
 
 -------
 
+### SwpFMDB API 详细文档:
+
 ### AFNetworking 下载地址
 
 > * [AFNetworking GitHub地址](https://github.com/AFNetworking/AFNetworking)   
@@ -33,10 +35,10 @@
 
 ### 版本记录
 
-> * 版本版本：2.6.8
-> * 更新时间：2017-08-22 22:47:08
+> * 版本版本：2.7.0
+> * 更新时间：2017-08-25 11:07:42
 > * 更新内容：
-    * 优化内部方法。
+    * 提供 Api 文档，去除部分 .h  文件
 
 -------
 

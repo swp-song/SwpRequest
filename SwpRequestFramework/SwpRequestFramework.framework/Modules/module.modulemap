@@ -3,35 +3,4 @@ framework module SwpRequestFramework {
 
   export *
   module * { export * }
-  
-  explicit module SwpRequestTools {
-      header    "SwpRequestTools.h"
-      link      "SwpRequestTools"
-      export *
-  }
-  
-  explicit module SwpNetworkModelTools {
-      header    "SwpNetworkModelTools.h"
-      link      "SwpNetworkModelTools"
-      export *
-  }
-  
-  explicit module SwpEncryptTools {
-      header    "SwpEncryptTools.h"
-      link      "SwpEncryptTools"
-      export *
-  }
-  
-  explicit module SwpBase64 {
-      header    "SwpBase64.h"
-      link      "SwpBase64"
-      export *
-  }
-  
-  explicit module SwpMD5Encrypt {
-      header    "SwpMD5Encrypt.h"
-      link      "SwpMD5Encrypt"
-      export *
-  }
-  
 }
