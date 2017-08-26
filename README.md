@@ -21,11 +21,14 @@
     > * **pod search SwpRequest**
     > * **pod 'SwpRequest'**
     > * **`#import <SwpRequestFramework/SwpRequestFramework.h>`**
-    > * pod 导入会自动添加依赖库, 无需手动导入
+    > * **pod** 导入会自动添加依赖库, 无需手动导入
 
 -------
 
-### SwpFMDB API 详细文档:
+### SwpFMDB 详细文档
+
+> * [SwpFMDB Api 首页文档](http://swp-song.com/docs/SwpRequest/index.html)
+> * [SwpFMDB Api 请求文档](http://swp-song.com/docs/SwpRequest/Classes/SwpRequest.html)
 
 ### AFNetworking 下载地址
 
@@ -35,20 +38,20 @@
 
 ### 版本记录
 
-> * 版本版本：2.7.0
-> * 更新时间：2017-08-25 11:07:42
+> * 版本版本：2.7.2
+> * 更新时间：2017-08-26 17:03:37
 > * 更新内容：
-    * 提供 Api 文档，去除部分 .h  文件
+    * 提供 Api 文档地址
 
 -------
 
 
-### 备注：
+### 备注
 > * 持续更新, 如果喜欢, 欢迎 Star
-
+> 
 -------
 
-### 声明:
+### 声明
 
  > * **著作权归 ©swp_song，如需转载请标明出处**
 
