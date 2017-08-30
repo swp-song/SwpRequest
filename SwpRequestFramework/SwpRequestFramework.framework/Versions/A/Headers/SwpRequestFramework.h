@@ -7,30 +7,27 @@
 //
 
 
-
-#ifndef SwpRequestFramework_h
-#define SwpRequestFramework_h
-
-    #ifdef __OBJC__
-        #import <UIKit/UIKit.h>
-    #else
-        #ifndef FOUNDATION_EXPORT
-            #if defined(__cplusplus)
-                #define FOUNDATION_EXPORT extern "C"
-            #else
-                #define FOUNDATION_EXPORT extern
-            #endif
-        #endif
-    #endif
-
-    FOUNDATION_EXPORT double SwpRequestFrameworkVersionNumber;
-    FOUNDATION_EXPORT const unsigned char SwpRequestFrameworkVersionString[];
-
-    #import <SwpRequestFramework/SwpRequest.h>
-    #import <SwpRequestFramework/SwpDownload.h>
-    #import <SwpRequestFramework/SwpRequestUtils.h>
-    #import <SwpRequestFramework/SwpNetworkModel.h>
-    #import <SwpRequestFramework/SwpRequest+MainInterface.h>
-    #import <SwpRequestFramework/SwpRequest+SwpEncryptRequest.h>
-
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#else
+#ifndef FOUNDATION_EXPORT
+#if defined(__cplusplus)
+#define FOUNDATION_EXPORT extern "C"
+#else
+#define FOUNDATION_EXPORT extern
 #endif
+#endif
+#endif
+
+#import "SwpRequest+MainInterface.h"
+#import "SwpRequest+SwpEncryptRequest.h"
+#import "SwpRequestDataType.h"
+#import "SwpBaseRequest.h"
+#import "SwpDownload.h"
+#import "SwpRequest.h"
+#import "SwpRequestFramework.h"
+#import "SwpRequestUtils.h"
+#import "SwpNetworkModel.h"
+
+FOUNDATION_EXPORT double SwpRequestFrameworkVersionNumber;
+FOUNDATION_EXPORT const unsigned char SwpRequestFrameworkVersionString[];
