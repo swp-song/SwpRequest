@@ -16,14 +16,14 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @brief  swpRequestInit  ( 单利 )
  */
-+ (__kindof SwpRequest * _Nonnull (^)())swpRequestInit;
++ (__kindof SwpRequest * _Nonnull (^)(void))swpRequestInit;
 
 /**
  *  @author swp_song
  *
  *  @brief  swpRequestLogInformationChain   ( 打印 SwpRequest 详细信息 )
  */
-- (__kindof SwpRequest * _Nonnull (^)())swpRequestLogInformationChain;
+- (__kindof SwpRequest * _Nonnull (^)(void))swpRequestLogInformationChain;
 
 /**
  *  @author swp_song
