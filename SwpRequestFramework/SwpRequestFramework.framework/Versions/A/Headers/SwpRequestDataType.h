@@ -21,10 +21,10 @@ typedef long long swp_int64_t;
  - SwpResultReachabilityStatusReachableViaWiFi: ( WiFi )
  */
 typedef NS_ENUM(NSInteger, SwpResultReachabilityStatus) {
-    SwpResultReachabilityStatusUnknown          = -1,
-    SwpResultReachabilityStatusNotReachable     = 0,
-    SwpResultReachabilityStatusReachableViaWWAN = 1,
-    SwpResultReachabilityStatusReachableViaWiFi = 2,
+    SwpResultReachabilityStatusUnknown = -1,
+    SwpResultReachabilityStatusNotReachable,
+    SwpResultReachabilityStatusReachableViaWWAN,
+    SwpResultReachabilityStatusReachableViaWiFi,
 };
 
 

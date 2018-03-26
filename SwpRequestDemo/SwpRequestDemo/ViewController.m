@@ -52,6 +52,9 @@ static NSString * const urlString1 = @"https://www.baidu.com";
 - (void)swpRequestGetData:(NSString *)urlString  {
     
     
+    NSLog(@"%@", SwpRequest.swpRequestInit().swpRequestVersion);
+    NSLog(@"%@", [SwpRequest shareInstance].swpRequestInformation);
+    
     SwpRequest.swpRequestInit()
     .swpRequestLogInformationChain()
     .swpRequestSetDebugEnabledChain(YES);

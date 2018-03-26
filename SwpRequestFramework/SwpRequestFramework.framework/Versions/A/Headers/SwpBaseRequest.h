@@ -17,8 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SwpBaseRequest : NSObject <NSCopying, NSMutableCopying>
 
-/** SwpRequest Version  */
+/** SwpRequest 版本号  */
 @property (nonatomic, copy, readonly) NSString *swpRequestVersion;
+
+/** SwpRequest 信息   */
+@property (nonatomic, copy, readonly) NSDictionary *swpRequestInformation;
 
 /** 是否开启 Debug 模式 */
 @property (nonatomic, assign, readonly, getter = isSwpRequestDebugEnabled) BOOL swpRequestDebugEnabled;
@@ -51,6 +54,24 @@ NS_ASSUME_NONNULL_BEGIN
  *  @return id
  */
 - (instancetype)swpRequestSetDebugEnabled:(BOOL)debugEnabled;
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpRequestInformation   ( 获取 SwpRequest 详细信息 )
+ *
+ *  @return NSDictionary
+ */
+- (NSDictionary *)swpRequestInformation;
+
+/**
+ *  @author swp_song
+ *
+ *  @brief  swpRequestVersion   ( 获取 SwpRequest 版本号 )
+ *
+ *  @return NSString
+ */
+- (NSString *)swpRequestVersion;
 
 
 @end

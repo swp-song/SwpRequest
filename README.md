@@ -1,6 +1,6 @@
 # SwpRequest
 
-[![Version](https://img.shields.io/cocoapods/v/SwpRequest.svg?style=flat)](https://img.shields.io/cocoapods/v/SwpRequest.svg?style=flat) [![License](https://img.shields.io/cocoapods/l/SwpRequest.svg?style=flat)](https://img.shields.io/cocoapods/l/SwpRequest.svg?style=flat) [![Platform](https://img.shields.io/cocoapods/p/SwpRequest.svg?style=flat)](https://img.shields.io/cocoapods/p/SwpRequest.svg?style=flat)
+[![Build Status](https://travis-ci.org/swp-song/SwpRequest.svg?branch=master)](https://travis-ci.org/swp-song/SwpRequest) [![Version](https://img.shields.io/cocoapods/v/SwpRequest.svg?style=flat)](https://img.shields.io/cocoapods/v/SwpRequest.svg?style=flat) [![License](https://img.shields.io/cocoapods/l/SwpRequest.svg?style=flat)](https://img.shields.io/cocoapods/l/SwpRequest.svg?style=flat) [![Platform](https://img.shields.io/cocoapods/p/SwpRequest.svg?style=flat)](https://img.shields.io/cocoapods/p/SwpRequest.svg?style=flat)
 
 -------
 
@@ -38,10 +38,17 @@
 
 ### 版本记录
 
+> * 版本版本：2.9.3
+> * 更新时间：2018-03-26 17:16:11
+> * 更新内容：
+>> * 新增资源文件，版本信息等。
+
+-------
+
 > * 版本版本：2.8.5
 > * 更新时间：2017-09-25 15:37:30
 > * 更新内容：
-    * 解决 Xcode 9 编译的一些警告问题
+>> * 解决 Xcode 9 编译的一些警告问题
 
 -------
 

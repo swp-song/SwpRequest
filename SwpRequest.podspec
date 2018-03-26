@@ -10,11 +10,11 @@ Pod::Spec.new do |s|
 
   s.name              = 'SwpRequest'
 
-  s.version           = "2.8.5"
+  s.version           = "2.9.3"
 
-  s.summary           = "Swp-Song Request Api."
+  s.summary           = " swp-song request Api. "
 
-  s.description       = "TODO: Swp-Song Request Api."
+  s.description       = "TODO: swp-song request Api "
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -34,6 +34,7 @@ Pod::Spec.new do |s|
   s.frameworks                = ["UIKit", "Foundation"]
   s.ios.deployment_target     = '8.0'
   s.ios.vendored_framework    = 'SwpRequestFramework/SwpRequestFramework.framework'
+  s.resource                  = 'SwpRequestFramework/SwpRequestFramework.framework/Versions/A/Resources/SwpRequest.bundle'
 
   s.dependency 'AFNetworking'
 
