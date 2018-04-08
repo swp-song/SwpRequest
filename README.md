@@ -7,7 +7,7 @@
 [![Version](https://img.shields.io/cocoapods/v/SwpRequest.svg?style=flat)](http://cocoapods.org/pods/SwpRequest)
 [![License](https://img.shields.io/cocoapods/l/SwpRequest.svg?style=flat)](http://cocoapods.org/pods/SwpRequest)
 [![Platform](https://img.shields.io/cocoapods/p/SwpRequest.svg?style=flat)](http://cocoapods.org/pods/SwpRequest)
-[![Xcode](https://img.shields.io/badge/AFNetworking-3.0%2B-orange.svg)](https://github.com/AFNetworking/AFNetworking)
+[![AFNetworking](https://img.shields.io/badge/AFNetworking-3.0%2B-orange.svg)](https://github.com/AFNetworking/AFNetworking)
 
 -------
 
