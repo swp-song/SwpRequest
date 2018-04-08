@@ -14,7 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.2.0)
   - AFNetworking/UIKit (3.2.0):
     - AFNetworking/NSURLSession
-  - SwpRequest (2.9.3):
+  - SwpRequest (3.0.4):
     - AFNetworking
 
 DEPENDENCIES:
@@ -30,8 +30,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
-  SwpRequest: e09271426a9bc373a9d70e56b86d845e286700b4
+  SwpRequest: 5615f8de24b4c448b1a2116989908964870fa4e4
 
 PODFILE CHECKSUM: 091123bdfe94a7f2e1db239793b235b46fa8602e
 
-COCOAPODS: 1.5.0.beta.1
+COCOAPODS: 1.5.0

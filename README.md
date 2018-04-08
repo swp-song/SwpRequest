@@ -1,6 +1,13 @@
 # SwpRequest
 
-[![Build Status](https://travis-ci.org/swp-song/SwpRequest.svg?branch=master)](https://travis-ci.org/swp-song/SwpRequest) [![Version](https://img.shields.io/cocoapods/v/SwpRequest.svg?style=flat)](https://img.shields.io/cocoapods/v/SwpRequest.svg?style=flat) [![License](https://img.shields.io/cocoapods/l/SwpRequest.svg?style=flat)](https://img.shields.io/cocoapods/l/SwpRequest.svg?style=flat) [![Platform](https://img.shields.io/cocoapods/p/SwpRequest.svg?style=flat)](https://img.shields.io/cocoapods/p/SwpRequest.svg?style=flat)
+
+[![Xcode](https://img.shields.io/badge/Xcode-9.3-25B1F6.svg)](https://developer.apple.com/xcode)
+[![iOS](https://img.shields.io/badge/iOS-8.0+-1C75AF.svg)](https://developer.apple.com/xcode)
+[![CI Status](http://img.shields.io/travis/swp-song/SwpRequest.svg?style=flat)](https://travis-ci.org/swp-song/SwpRequest)
+[![Version](https://img.shields.io/cocoapods/v/SwpRequest.svg?style=flat)](http://cocoapods.org/pods/SwpRequest)
+[![License](https://img.shields.io/cocoapods/l/SwpRequest.svg?style=flat)](http://cocoapods.org/pods/SwpRequest)
+[![Platform](https://img.shields.io/cocoapods/p/SwpRequest.svg?style=flat)](http://cocoapods.org/pods/SwpRequest)
+[![Xcode](https://img.shields.io/badge/AFNetworking-3.0%2B-orange.svg)](https://github.com/AFNetworking/AFNetworking)
 
 -------
 
@@ -25,18 +32,21 @@
 
 -------
 
-### SwpFMDB 详细文档
+### SwpRequestFramework 文档
 
-> * [SwpFMDB Api 首页文档](http://swp-song.com/docs/SwpRequest/index.html)
-> * [SwpFMDB Api 请求文档](http://swp-song.com/docs/SwpRequest/Classes/SwpRequest.html)
-
-### AFNetworking 下载地址
-
-> * [AFNetworking GitHub地址](https://github.com/AFNetworking/AFNetworking)   
+> * **[SwpRequestFramework](http://swp-song.com/docs/SwpRequest)**
 
 -------
 
+
 ### 版本记录
+
+> * 版本版本：3.0.4
+> * 更新时间：2018-04-08 18:49:19
+> * 更新内容：
+>> * 修改内部获取设备 ip 方法，新增本地文档。
+
+-------
 
 > * 版本版本：2.9.3
 > * 更新时间：2018-03-26 17:16:11
@@ -44,14 +54,6 @@
 >> * 新增资源文件，版本信息等。
 
 -------
-
-> * 版本版本：2.8.5
-> * 更新时间：2017-09-25 15:37:30
-> * 更新内容：
->> * 解决 Xcode 9 编译的一些警告问题
-
--------
-
 
 ### 备注
 

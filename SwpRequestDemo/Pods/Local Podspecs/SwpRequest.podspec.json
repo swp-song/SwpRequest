@@ -1,8 +1,8 @@
 {
   "name": "SwpRequest",
-  "version": "2.9.3",
-  "summary": "swp-song Request Api.",
-  "description": "TODO: swp-song Request Api.",
+  "version": "3.0.4",
+  "summary": "swp-song Request Api. SwpRequest.",
+  "description": "TODO: swp-song Request Api. SwpRequest.",
   "homepage": "https://github.com/swp-song/SwpRequest",
   "license": {
     "type": "MIT",
@@ -13,13 +13,8 @@
   },
   "source": {
     "git": "https://github.com/swp-song/SwpRequest.git",
-    "tag": "2.9.3"
+    "tag": "3.0.4"
   },
-  "requires_arc": true,
-  "frameworks": [
-    "UIKit",
-    "Foundation"
-  ],
   "platforms": {
     "ios": "8.0"
   },
@@ -27,9 +22,14 @@
     "vendored_frameworks": "SwpRequestFramework/SwpRequestFramework.framework"
   },
   "resources": "SwpRequestFramework/SwpRequestFramework.framework/Versions/A/Resources/SwpRequest.bundle",
+  "frameworks": [
+    "UIKit",
+    "Foundation"
+  ],
   "dependencies": {
     "AFNetworking": [
 
     ]
-  }
+  },
+  "requires_arc": true
 }
