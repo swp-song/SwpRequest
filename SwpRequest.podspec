@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwpRequest'
-  s.version          = '3.0.4'
+  s.version          = '3.0.5'
   s.summary          = ' swp-song Request Api. SwpRequest. '
 
 # This description is used to generate tags and improve search results.
@@ -34,15 +34,17 @@ TODO: swp-song Request Api. SwpRequest.
 
   s.ios.vendored_framework    = 'SwpRequestFramework/SwpRequestFramework.framework'
   s.resource                  = 'SwpRequestFramework/SwpRequestFramework.framework/Versions/A/Resources/SwpRequest.bundle'
+  s.requires_arc              = true
+  s.frameworks = 'UIKit', 'Foundation'
+
+  s.dependency 'AFNetworking'
 
   # s.resource_bundles = {
   #   'SwpRequest' => ['SwpRequest/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  s.frameworks = 'UIKit', 'Foundation'
 
-  s.dependency 'AFNetworking'
-  s.requires_arc = true
+
 
 end

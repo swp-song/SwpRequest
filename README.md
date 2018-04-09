@@ -3,10 +3,11 @@
 
 [![Xcode](https://img.shields.io/badge/Xcode-9.3-25B1F6.svg)](https://developer.apple.com/xcode)
 [![iOS](https://img.shields.io/badge/iOS-8.0+-1C75AF.svg)](https://developer.apple.com/xcode)
-[![CI Status](http://img.shields.io/travis/swp-song/SwpRequest.svg?style=flat)](https://travis-ci.org/swp-song/SwpRequest)
+[![CIStatus](http://img.shields.io/travis/swp-song/SwpRequest.svg?style=flat)](https://travis-ci.org/swp-song/SwpRequest)
 [![Version](https://img.shields.io/cocoapods/v/SwpRequest.svg?style=flat)](http://cocoapods.org/pods/SwpRequest)
 [![License](https://img.shields.io/cocoapods/l/SwpRequest.svg?style=flat)](http://cocoapods.org/pods/SwpRequest)
 [![Platform](https://img.shields.io/cocoapods/p/SwpRequest.svg?style=flat)](http://cocoapods.org/pods/SwpRequest)
+[![SwpRequestFrameworkAPI](https://img.shields.io/badge/SwpRequestFrameworkAPI-v3.0.5-44E0D3.svg)](http://swp-song.com/docs/SwpRequest)
 [![AFNetworking](https://img.shields.io/badge/AFNetworking-3.0%2B-orange.svg)](https://github.com/AFNetworking/AFNetworking)
 
 -------
@@ -41,17 +42,17 @@
 
 ### 版本记录
 
+> * 版本版本：3.0.5
+> * 更新时间：2018-04-09 16:11:35
+> * 更新内容：
+>> * 修复内部方法，新增 Api 标签
+
+-------
+
 > * 版本版本：3.0.4
 > * 更新时间：2018-04-08 18:49:19
 > * 更新内容：
 >> * 修改内部获取设备 ip 方法，新增本地文档。
-
--------
-
-> * 版本版本：2.9.3
-> * 更新时间：2018-03-26 17:16:11
-> * 更新内容：
->> * 新增资源文件，版本信息等。
 
 -------
 
